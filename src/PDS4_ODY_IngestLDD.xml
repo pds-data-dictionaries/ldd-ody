@@ -3,9 +3,8 @@
     href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<Ingest_LDD 
-  xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
   http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd">
   <name>ODY</name>
@@ -62,7 +61,7 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>VIS</value>
-        <value_meaning> Thermal Emission Imaging System Visible instrument</value_meaning>
+        <value_meaning>Thermal Emission Imaging System Visible instrument</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -81,7 +80,7 @@
       <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
   <DD_Attribute>
     <name>flight_software_version_id</name>
     <version_id>1.0</version_id>
@@ -97,7 +96,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
   <DD_Attribute>
     <name>focal_plane_temperature</name>
     <version_id>1.0</version_id>
@@ -113,7 +112,7 @@
       <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
- 
+
   <DD_Attribute>
     <name>gain_number</name>
     <version_id>1.0</version_id>
@@ -130,7 +129,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
   <DD_Attribute>
     <name>image_description</name>
     <version_id>1.0</version_id>
@@ -242,7 +241,7 @@
       <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
   <DD_Attribute>
     <name>minimum_brightness_temperature</name>
     <version_id>1.0</version_id>
@@ -258,7 +257,7 @@
       <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
   <DD_Attribute>
     <name>missing_scan_lines</name>
     <version_id>1.0</version_id>
@@ -283,8 +282,7 @@
     <submitter_name>IMG</submitter_name>
     <definition>The offset value of the THEMIS IR camera; the
       offset value multiplied by a constant voltage is added to the
-      measured voltage in the analog to digital
-      conversion.
+      measured voltage in the analog to digital conversion.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -301,8 +299,7 @@
     <submitter_name>IMG</submitter_name>
     <definition>The offset value of the THEMIS IR camera; the
       offset value multiplied by a constant voltage is added to the
-      measured voltage in the analog to digital
-      conversion.
+      measured voltage in the analog to digital conversion.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -310,7 +307,7 @@
       <unit_of_measure_type>Units_of_None</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
   <DD_Attribute>
     <name>partial_scan_lines</name>
     <version_id>1.0</version_id>
@@ -359,7 +356,7 @@
         <value_meaning>Derived Data Record</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
-  </DD_Attribute>  
+  </DD_Attribute>
 
   <DD_Attribute>
     <name>rice_flag</name>
@@ -391,8 +388,7 @@
     <local_identifier>ody.spacecraft_orientation_pitch</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>IMG</submitter_name>
-    <definition>Odyssey spacecraft pitch orientation during this
-      observation.
+    <definition>Odyssey spacecraft pitch orientation during this observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -407,8 +403,7 @@
     <local_identifier>ody.spacecraft_orientation_roll</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>IMG</submitter_name>
-    <definition>Odyssey spacecraft roll orientation during this
-      observation.
+    <definition>Odyssey spacecraft roll orientation during this observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -416,15 +411,14 @@
       <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
-  
+
   <DD_Attribute>
     <name>spacecraft_orientation_yaw</name>
     <version_id>1.0</version_id>
     <local_identifier>ody.spacecraft_orientation_yaw</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>IMG</submitter_name>
-    <definition>Odyssey spacecraft yaw orientation during this
-      observation.
+    <definition>Odyssey spacecraft yaw orientation during this observation.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -464,7 +458,7 @@
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
       <value_data_type>ASCII_Integer</value_data_type>
-      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+      <unit_of_measure_type>Units_of_Misc</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
 
@@ -522,37 +516,37 @@
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>product_type</identifier_reference>
+      <identifier_reference>ody.product_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>orbit_number</identifier_reference>
+      <identifier_reference>ody.orbit_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>THEMIS_Observation_Context</identifier_reference>
+      <identifier_reference>ody.THEMIS_Observation_Context</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>THEMIS_Instrument_Attributes</identifier_reference>
+      <identifier_reference>ody.THEMIS_Instrument_Attributes</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>THEMIS_Image_Properties</identifier_reference>
+      <identifier_reference>ody.THEMIS_Image_Properties</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  
+
   <DD_Class>
     <name>THEMIS_Image_Properties</name>
     <version_id>1.0</version_id>
@@ -563,61 +557,61 @@
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>image_id</identifier_reference>
+      <identifier_reference>ody.image_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>image_duration</identifier_reference>
+      <identifier_reference>ody.image_duration</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>inst_compression_ratio</identifier_reference>
+      <identifier_reference>ody.inst_compression_ratio</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>focal_plane_temperature</identifier_reference>
+      <identifier_reference>ody.focal_plane_temperature</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>missing_scan_lines</identifier_reference>
+      <identifier_reference>ody.missing_scan_lines</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>partial_scan_lines</identifier_reference>
+      <identifier_reference>ody.partial_scan_lines</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>uncorrected_sclk_start_count</identifier_reference>
+      <identifier_reference>ody.uncorrected_sclk_start_count</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>image_description</identifier_reference>
+      <identifier_reference>ody.image_description</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>maximum_brightness_temperature</identifier_reference>
+      <identifier_reference>ody.maximum_brightness_temperature</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>minimum_brightness_temperature</identifier_reference>
+      <identifier_reference>ody.minimum_brightness_temperature</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -635,67 +629,67 @@
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>detector_id</identifier_reference>
+      <identifier_reference>ody.detector_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>flight_software_version_id</identifier_reference>
+      <identifier_reference>ody.flight_software_version_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>command_sequence_number</identifier_reference>
+      <identifier_reference>ody.command_sequence_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>spatial_summing</identifier_reference>
+      <identifier_reference>ody.spatial_summing</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>interframe_delay</identifier_reference>
+      <identifier_reference>ody.interframe_delay</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>exposure_duration</identifier_reference>
+      <identifier_reference>ody.exposure_duration</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>inst_compression_name</identifier_reference>
+      <identifier_reference>ody.inst_compression_name</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>gain_number</identifier_reference>
+      <identifier_reference>ody.gain_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>offset_number</identifier_reference>
+      <identifier_reference>ody.offset_number</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>rice_flag</identifier_reference>
+      <identifier_reference>ody.rice_flag</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>time_delay_integration_flag</identifier_reference>
+      <identifier_reference>ody.time_delay_integration_flag</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
@@ -713,25 +707,25 @@
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
-      <identifier_reference>pacecraft_orientation_pitch</identifier_reference>
+      <identifier_reference>ody.spacecraft_orientation_pitch</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>pacecraft_orientation_roll</identifier_reference>
+      <identifier_reference>ody.spacecraft_orientation_roll</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>pacecraft_orientation_yaw</identifier_reference>
+      <identifier_reference>ody.spacecraft_orientation_yaw</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>spacecraft_pointing_mode</identifier_reference>
+      <identifier_reference>ody.spacecraft_pointing_mode</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
