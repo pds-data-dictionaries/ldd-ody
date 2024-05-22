@@ -8,7 +8,7 @@
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
   http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd">
-  <name>MRO</name>
+  <name>ODY</name>
   <ldd_version_id>1.0.0.0</ldd_version_id>
   <dictionary_type>Mission</dictionary_type>
   <full_name>Jennifer Ward</full_name>
@@ -27,12 +27,102 @@
   <last_modification_date_time>2024-05-21</last_modification_date_time>
 
   <DD_Attribute>
-    <name>my_first_attribute</name>
+    <name>command_sequence_number</name>
     <version_id>1.0</version_id>
-    <local_identifier>my_first_attribute</local_identifier>
+    <local_identifier>ody.command_sequence_number</local_identifier>
     <nillable_flag>false</nillable_flag>
-    <submitter_name>Jane Doe</submitter_name>
-    <definition>My first attribute
+    <submitter_name>IMG</submitter_name>
+    <definition>Numeric identifier for the sequence of commands
+      sent to the Odyssey spacecraft which include this THEMIS
+      observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- ('IR', 'VIS') -->
+  <DD_Attribute>
+    <name>detector_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.detector_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Abbreviated name of THEMIS camera used to
+      collect this observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>IR</value>
+        <value_meaning>Thermal Emission Imaging System Infrared instrument</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>VIS</value>
+        <value_meaning> Thermal Emission Imaging System Visible instrument</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>exposure_duration</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.exposure_duration</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>exposure duration time.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>flight_software_version_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.flight_software_version_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The version of THEMIS instrument flight software
+      used to acquire the observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>focal_plane_temperature</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.focal_plane_temperature</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Temperature of the THEMIS VIS camera focal plane
+      array at the time of the observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+ 
+  <DD_Attribute>
+    <name>gain_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.gain_number</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The gain value of the THEMIS IR camera; a
+      multiplicative factor used in the analog to digital
+      conversion.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -41,19 +131,607 @@
     </DD_Value_Domain>
   </DD_Attribute>
   
-  <DD_Class>
-    <name>My_First_LDD</name>
+  <DD_Attribute>
+    <name>image_description</name>
     <version_id>1.0</version_id>
-    <local_identifier>First</local_identifier>
-    <submitter_name>Jane Doe</submitter_name>
-    <definition>My first class</definition>
+    <local_identifier>ody.image_description</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Description of the observation written by the
+      THEMIS Mission Planner.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>image_duration</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.image_duration</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The length of time required to collect all
+      frames of all bands in the downlinked image.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>image_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.image_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Numeric identifier for this observation within
+      the onboard command sequence.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>inst_compression_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.inst_compression_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The type of compression applied to the THEMIS
+      VIS data onboard the spacecraft and removed before storage in
+      the raw data file.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>inst_compression_ratio</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.inst_compression_ratio</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The ratio of the size of the uncompressed data
+      file to the compressed data file.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>interframe_delay</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.interframe_delay</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The time between successive frames of a THEMIS
+      VIS observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>maximum_brightness_temperature</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.maximum_brightness_temperature</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Maximum brightness temperature value measured
+      within the image.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>minimum_brightness_temperature</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.minimum_brightness_temperature</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Minimum brightness temperature value measured
+      within the image.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Temperature</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>missing_scan_lines</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.missing_scan_lines</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The total number of scan lines missing from a
+      THEMIS IR image when it was received at Earth.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>offset_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.offset_number</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The offset value of the THEMIS IR camera; the
+      offset value multiplied by a constant voltage is added to the
+      measured voltage in the analog to digital
+      conversion.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>orbit_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.orbit_number</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The offset value of the THEMIS IR camera; the
+      offset value multiplied by a constant voltage is added to the
+      measured voltage in the analog to digital
+      conversion.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_NonNegative_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>partial_scan_lines</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.partial_scan_lines</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The number of lines in a summed THEMIS IR image
+      which were produced by averaging less than N lines of the
+      original non-summed image, where N is the value of the
+      spatial_summing keyword. Value of N/A used for
+      spatial_summing=1.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <!-- CDR', 'DDR', 'EDR', 'RDR' -->
+  <DD_Attribute>
+    <name>product_type</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.product_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The product_type attribute identifies the type of data product.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>EDR</value>
+        <value_meaning>Experiment Data Record</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>RDR</value>
+        <value_meaning>Reduced Data Record</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>CDR</value>
+        <value_meaning>Calibrated Data Record</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>DDR</value>
+        <value_meaning>Derived Data Record</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>  
+
+  <DD_Attribute>
+    <name>rice_flag</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.rice_flag</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Status of onboard lossless compression algorithm
+      applied before downlinking the THEMIS IR observation and removed
+      before storage in the raw data file.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Disable</value>
+        <value_meaning>onboard lossless compression was disabled</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Enabled</value>
+        <value_meaning>onboard lossless compression was enabled</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>spacecraft_orientation_pitch</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.spacecraft_orientation_pitch</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Odyssey spacecraft pitch orientation during this
+      observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>spacecraft_orientation_roll</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.spacecraft_orientation_roll</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Odyssey spacecraft roll orientation during this
+      observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute>
+    <name>spacecraft_orientation_yaw</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.spacecraft_orientation_yaw</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Odyssey spacecraft yaw orientation during this
+      observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>spacecraft_pointing_mode</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.spacecraft_pointing_mode</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Description of the Odyssey spacecraft pointing
+      mode during this observation; see ODY_ORIENT_POINTING.txt for
+      definitions of valid modes.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>spatial_summing</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.spatial_summing</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Onboard spatial average of NxN set of pixels,
+      where N is the value of the keyword. A SPATIAL_SUMMING value
+      equal to 1 indicates that no spatial averaging has been applied
+      to the observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Integer</value_data_type>
+      <unit_of_measure_type>Units_of_None</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>time_delay_integration_flag</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.time_delay_integration_flag</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>Status of onboard algorithm which applies a
+      temporal average of successive lines in an IR image. When
+      enabled, THEMIS TDI averages 16 detector rows to equal one line
+      in an IR image.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>Disable</value>
+        <value_meaning>temporal average of successive lines was disabled</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>Enabled</value>
+        <value_meaning>temporal average of successive lines was enabled</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Attribute>
+    <name>uncorrected_sclk_start_count</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.uncorrected_sclk_start_count</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>IMG</submitter_name>
+    <definition>The spacecraft clock value when the THEMIS
+      instrument was commanded to acquire an observation. This can
+      differ from the SPACECRAFT_CLOCK_START_COUNT (or the other
+      START_TIME keywords) by as much as 4 seconds, depending on which
+      bands are acquired in the observation.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
+  <DD_Class>
+    <name>ODY_Parameters</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.ODY_Parameters</local_identifier>
+    <submitter_name>IMG</submitter_name>
+    <definition>The ODY_Parameters class is the container for
+      mission-specific metadata elements.</definition>
     <element_flag>true</element_flag>
     <DD_Association>
-      <identifier_reference>my_first_attribute</identifier_reference>
+      <identifier_reference>product_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>1</minimum_occurrences>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>orbit_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>THEMIS_Observation_Context</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>THEMIS_Instrument_Attributes</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>THEMIS_Image_Properties</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
   
+  <DD_Class>
+    <name>THEMIS_Image_Properties</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.THEMIS_Image_Properties</local_identifier>
+    <submitter_name>IMG</submitter_name>
+    <definition>The THEMIS_Image_Properties class contains
+      attributes specific to THEMIS images.</definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>image_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>image_duration</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>inst_compression_ratio</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>focal_plane_temperature</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>missing_scan_lines</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>partial_scan_lines</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>uncorrected_sclk_start_count</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>image_description</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>maximum_brightness_temperature</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>minimum_brightness_temperature</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <DD_Class>
+    <name>THEMIS_Instrument_Attributes</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.THEMIS_Instrument_Attributes</local_identifier>
+    <submitter_name>IMG</submitter_name>
+    <definition>The THEMIS_Instrument_Attributes class contains
+      attributes specific to the THEMIS instrument.
+    </definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>detector_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>flight_software_version_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>command_sequence_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>spatial_summing</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>interframe_delay</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>exposure_duration</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>inst_compression_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>gain_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>offset_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>rice_flag</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>time_delay_integration_flag</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
+  <DD_Class>
+    <name>THEMIS_Observation_Context</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.THEMIS_Observation_Context</local_identifier>
+    <submitter_name>IMG</submitter_name>
+    <definition>The THEMIS_Observation_Context class contains
+      attributes specific to THEMIS observations.
+    </definition>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>pacecraft_orientation_pitch</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>pacecraft_orientation_roll</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>pacecraft_orientation_yaw</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>spacecraft_pointing_mode</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+
 </Ingest_LDD>
