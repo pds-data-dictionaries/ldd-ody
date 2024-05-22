@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model
-    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.sch"
+<?xml-model 
+    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1E00.xsd">
-  
-  <name>Example LDD</name>
+<Ingest_LDD 
+  xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
+  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd">
+  <name>MRO</name>
   <ldd_version_id>1.0.0.0</ldd_version_id>
-  <dictionary_type>Discipline</dictionary_type>
-  <full_name>Doe, Jane</full_name>
-  <steward_id>janedoe</steward_id>
-  <namespace_id>example</namespace_id>
-  <last_modification_date_time>2030-04-10T18:00:00Z</last_modification_date_time>
+  <dictionary_type>Mission</dictionary_type>
+  <full_name>Jennifer Ward</full_name>
+  <steward_id>geo</steward_id>
+  <namespace_id>ody</namespace_id>
+  <comment>
+    The ODY dictionary contains classes that describe aspects of the 
+    Mars Odyssey mission and related instruments.
+    
+    ODY version 1.0.0.0
+    PDS Build 1.18.0.0 (1I00)
+    
+    2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version
+    
+  </comment>
+  <last_modification_date_time>2024-05-21</last_modification_date_time>
 
   <DD_Attribute>
     <name>my_first_attribute</name>
