@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/msn/v1/PDS4_MSN_1L00_1303.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1L00_1300.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1L00_1970.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1L00_1510.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1L00_1890.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/sp/v1/PDS4_SP_1L00_1311.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/pds-data-dictionaries/ldd-ody/v1.0.0.0_release/build/release/1.21.0.0/PDS4_ODY_1L00_1000.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<Product_Observational 
+    xmlns="http://pds.nasa.gov/pds4/pds/v1" 
+    xmlns:pds="http://pds.nasa.gov/pds4/pds/v1" 
+    xmlns:msn="http://pds.nasa.gov/pds4/msn/v1"
+    xmlns:proc="http://pds.nasa.gov/pds4/proc/v1"
+    xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
+    xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
+    xmlns:img="http://pds.nasa.gov/pds4/img/v1"
+    xmlns:sp="http://pds.nasa.gov/pds4/sp/v1"
+    xmlns:ody="http://pds.nasa.gov/pds4/mission/ody/v1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1L00.xsd
+                        http://pds.nasa.gov/pds4/msn/v1 https://pds.nasa.gov/pds4/msn/v1/PDS4_MSN_1L00_1303.xsd 
+                        http://pds.nasa.gov/pds4/proc/v1 https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1L00_1300.xsd 
+                        http://pds.nasa.gov/pds4/geom/v1 https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1L00_1970.xsd 
+                        http://pds.nasa.gov/pds4/disp/v1 https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1L00_1510.xsd
+                        http://pds.nasa.gov/pds4/img/v1 https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1L00_1890.xsd
+                        http://pds.nasa.gov/pds4/sp/v1 https://pds.nasa.gov/pds4/sp/v1/PDS4_SP_1L00_1311.xsd
+                        http://pds.nasa.gov/pds4/mission/ody/v1 https://raw.githubusercontent.com/pds-data-dictionaries/ldd-ody/v1.0.0.0_release/build/release/1.21.0.0/PDS4_ODY_1L00_1000.xsd">  
+  
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ody.themis:data_sdp:i01111002rdr</logical_identifier>
+    <version_id>2.0</version_id>
+    <title>I01111002RDR.QUB</title>
+    <information_model_version>1.21.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Alias_List>
+      <Alias>
+        <alternate_id>I01111002RDR.QUB</alternate_id>
+        <comment>PDS3_volume path= odtsdp_v1/data/odtir1_0001/i011xxrdr/</comment>  
+      </Alias>
+    </Alias_List>
+    <Modification_History> 
+      <Modification_Detail> 
+        <modification_date>2022-11-01</modification_date> 
+        <version_id>2.0</version_id>
+        <description>ERRATA_ID=ODTIR-0001-2.0 
+          Updated CAL_IR_IMAGE software v5.2 and IR-RDR v2.0. PDS4 XML label generated for this version of the described data product.
+        </description>
+      </Modification_Detail> <Modification_Detail> 
+        <modification_date>2009-05-01</modification_date> 
+        <version_id>1.7</version_id>
+        <description>ERRATA_ID=ODTIR-0001-1.7 
+          Updated CAL_IR_IMAGE software v5.1 for all images
+        </description>
+      </Modification_Detail> <Modification_Detail> 
+        <modification_date>2004-09-25</modification_date> 
+        <version_id>1.6</version_id>
+        <description>ERRATA_ID=ODTIR-0001-1.6 
+          Improved STRAYLIGHT algorithm in CAL_IR_IMAGE v4.8; source IR-EDR header updated and propagated
+        </description>
+      </Modification_Detail> <Modification_Detail> 
+        <modification_date>2003-06-07</modification_date> 
+        <version_id>1.4</version_id>
+        <description>ERRATA_ID=ODTIR-0001-1.4 
+          Header updated to include IMAGE_DURATION
+        </description>
+      </Modification_Detail> <Modification_Detail> 
+        <modification_date>2003-04-21</modification_date> 
+        <version_id>1.3</version_id>
+        <description>ERRATA_ID=ODTIR-0001-1.3 
+          Error propagated during data format change
+        </description>
+      </Modification_Detail> <Modification_Detail> 
+        <modification_date>2003-03-05</modification_date> 
+        <version_id>1.1</version_id>
+        <description>ERRATA_ID=ODTIR-0001-1.1 
+          Change data to 16-bit; scaling factors are per band
+        </description>
+      </Modification_Detail> 
+    </Modification_History>
+  </Identification_Area>
+  
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2002-03-16T00:05:17.171Z</start_date_time>
+      <stop_date_time>2002-03-16T00:06:43.041Z</stop_date_time>
+      <local_true_solar_time>15:06:25.2</local_true_solar_time> 
+      <solar_longitude unit="deg">342.688</solar_longitude>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Calibrated</processing_level>
+      <description>MARS ODYSSEY THEMIS Standard Data Products, INFRARED RDR Version 1.0</description>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>2001 Mars Odyssey</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:investigation:mission.2001_mars_odyssey</lid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component> 
+        <name>2001 Mars Odyssey</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ody</lid_reference>
+          <reference_type>is_instrument_host</reference_type> 
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>THEMIS</name> 
+        <type>Instrument</type>
+        <description>Thermal Emission Imaging System</description>
+        <Internal_Reference>
+          <lid_reference>urn:nasa:pds:context:instrument:ody.themis</lid_reference>
+          <reference_type>is_instrument</reference_type> 
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>MARS</name>
+      <type>Planet</type>
+      <Internal_Reference>
+        <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Mission_Area>
+      <msn:Mission_Information>
+        <msn:mission_phase_name>MAPPING</msn:mission_phase_name>
+        <msn:release_number>0001</msn:release_number>
+        <msn:spacecraft_clock_start>700704370.051</msn:spacecraft_clock_start>
+        <msn:spacecraft_clock_stop>700704456.018</msn:spacecraft_clock_stop>
+        <msn:ephemeris_start_time unit="s">69509181.360</msn:ephemeris_start_time>
+        <msn:ephemeris_stop_time unit="s">69509267.230</msn:ephemeris_stop_time>
+        <msn:Orbital_Mission>
+          <msn:start_orbit_number>01111</msn:start_orbit_number>
+        </msn:Orbital_Mission>
+      </msn:Mission_Information>
+      <ody:ODY_Parameters>
+        <ody:THEMIS_Observation_Context>
+          <ody:spacecraft_orientation_pitch unit="deg">0</ody:spacecraft_orientation_pitch>
+          <ody:spacecraft_orientation_roll unit="deg">0</ody:spacecraft_orientation_roll>
+          <ody:spacecraft_orientation_yaw unit="deg">0</ody:spacecraft_orientation_yaw>
+          <ody:spacecraft_pointing_mode>NADIR</ody:spacecraft_pointing_mode>
+        </ody:THEMIS_Observation_Context>
+        <ody:THEMIS_Instrument_Attributes>
+          <ody:detector_id>IR</ody:detector_id> 
+          <ody:spatial_summing>1</ody:spatial_summing>
+          <ody:gain_number>16</ody:gain_number>
+          <ody:offset_number>0</ody:offset_number>
+          <ody:time_delay_integration_flag>Enabled</ody:time_delay_integration_flag>
+        </ody:THEMIS_Instrument_Attributes>
+        <ody:THEMIS_Image_Properties>
+          <ody:image_id>2</ody:image_id>
+          <ody:image_duration unit="s">85.867</ody:image_duration>
+          <ody:missing_scan_lines>0</ody:missing_scan_lines>
+          <ody:uncorrected_sclk_start_count unit="s">700704370.051</ody:uncorrected_sclk_start_count>
+          <ody:image_description>MSIP crater image - Danvers IL</ody:image_description>
+        </ody:THEMIS_Image_Properties>
+      </ody:ODY_Parameters>
+   </Mission_Area>
+    
+    <Discipline_Area>
+      <geom:Geometry>
+        <geom:SPICE_Kernel_Files>
+          <geom:SPICE_Kernel_Identification> <!-- CK -->
+            <geom:kernel_type>CK</geom:kernel_type>
+            <geom:spice_kernel_file_name>m01_sc_map1_v2.bc</geom:spice_kernel_file_name> 
+            <geom:kernel_provenance>Reconstructed</geom:kernel_provenance>
+          </geom:SPICE_Kernel_Identification>
+          <geom:SPICE_Kernel_Identification> <!-- SPK -->
+            <geom:kernel_type>SPK</geom:kernel_type>
+            <geom:spice_kernel_file_name>m01_map1_v2.bsp</geom:spice_kernel_file_name>
+            <geom:kernel_provenance>Reconstructed</geom:kernel_provenance>
+          </geom:SPICE_Kernel_Identification>
+          <geom:SPICE_Kernel_Identification> <!-- SCLK -->
+            <geom:kernel_type>SCLK</geom:kernel_type>
+            <geom:spice_kernel_file_name>ORB1_SCLKSCET.00279.tsc</geom:spice_kernel_file_name>
+            <geom:kernel_provenance>Reconstructed</geom:kernel_provenance>
+          </geom:SPICE_Kernel_Identification>
+        </geom:SPICE_Kernel_Files>
+        <geom:Image_Display_Geometry>
+          <geom:Display_Direction>
+            <geom:horizontal_display_axis>Sample</geom:horizontal_display_axis>
+            <geom:horizontal_display_direction>Left to Right</geom:horizontal_display_direction>
+            <geom:vertical_display_axis>Line</geom:vertical_display_axis>
+            <geom:vertical_display_direction>Top to Bottom</geom:vertical_display_direction>
+          </geom:Display_Direction>
+          <geom:Object_Orientation_North_East>
+            <geom:north_azimuth unit="deg">262.235</geom:north_azimuth>
+            <geom:east_azimuth unit="deg">0.0</geom:east_azimuth> <!-- value unknown -->
+            <geom:Reference_Frame_Identification>
+              <geom:frame_spice_name>M01_SPACECRAFT</geom:frame_spice_name>
+            </geom:Reference_Frame_Identification>
+          </geom:Object_Orientation_North_East>
+        </geom:Image_Display_Geometry>
+        <geom:Geometry_Orbiter>
+          <geom:geometry_start_time_utc>2002-03-16T00:05:17.171Z</geom:geometry_start_time_utc>
+          <geom:geometry_stop_time_utc>2002-03-16T00:06:43.041Z</geom:geometry_stop_time_utc>
+          <geom:Orbiter_Identification>  
+            <geom:Coordinate_System_Identification>
+              <geom:coordinate_system_type>Planetocentric</geom:coordinate_system_type>
+              <geom:Coordinate_System_Origin_Identification>
+                <geom:body_spice_name>MARSIAU</geom:body_spice_name>
+              </geom:Coordinate_System_Origin_Identification>
+              <geom:Reference_Frame_Identification>
+                <geom:frame_spice_name>M01_SPACECRAFT</geom:frame_spice_name>
+              </geom:Reference_Frame_Identification>
+            </geom:Coordinate_System_Identification>
+          </geom:Orbiter_Identification> 
+          <geom:Pixel_Dimensions>
+            <geom:pixel_field_of_view_method>Constant</geom:pixel_field_of_view_method>
+            <geom:Pixel_Size_Projected>
+              <geom:reference_location>Target Center</geom:reference_location>
+              <geom:horizontal_pixel_footprint unit="km">0.098</geom:horizontal_pixel_footprint>
+              <geom:vertical_pixel_footprint unit="km">0.100</geom:vertical_pixel_footprint>
+            </geom:Pixel_Size_Projected>
+          </geom:Pixel_Dimensions>
+          <geom:Distances>
+            <geom:Distances_Specific>
+              <geom:target_heliocentric_distance unit="AU">1.515</geom:target_heliocentric_distance>
+              <geom:spacecraft_target_subspacecraft_distance unit="km">398.963</geom:spacecraft_target_subspacecraft_distance>  
+            </geom:Distances_Specific>
+          </geom:Distances>
+          <geom:Surface_Geometry>
+            <geom:Surface_Geometry_Specific>
+              <geom:Pixel_Intercept>
+                <geom:reference_pixel_location>Center</geom:reference_pixel_location>
+                <geom:pixel_latitude unit="deg">-8.056</geom:pixel_latitude>
+                <geom:pixel_longitude unit="deg">23.142</geom:pixel_longitude>
+              </geom:Pixel_Intercept>
+              <geom:subsolar_azimuth unit="deg">175.215</geom:subsolar_azimuth>
+            </geom:Surface_Geometry_Specific>
+            <geom:Surface_Geometry_Min_Max>
+              <geom:minimum_latitude unit="deg">-10.238</geom:minimum_latitude>
+              <geom:maximum_latitude unit="deg">-5.877</geom:maximum_latitude>
+              <geom:minimum_longitude unit="deg">22.578</geom:minimum_longitude>
+              <geom:maximum_longitude unit="deg">23.703</geom:maximum_longitude>
+            </geom:Surface_Geometry_Min_Max>
+          </geom:Surface_Geometry>
+          <geom:Illumination_Geometry>
+            <geom:Illumination_Specific>
+              <geom:reference_pixel_location>Center</geom:reference_pixel_location>
+              <geom:emission_angle unit="deg">1.460</geom:emission_angle>
+              <geom:incidence_angle unit="deg">46.168</geom:incidence_angle>
+              <geom:phase_angle unit="deg">46.389</geom:phase_angle>
+            </geom:Illumination_Specific>
+          </geom:Illumination_Geometry>
+        </geom:Geometry_Orbiter>
+      </geom:Geometry>            
+      
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_01</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_02</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_03</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_04</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_05</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_06</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_07</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_08</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_09</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <disp:Display_Settings> 
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_10</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_01</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">6.78</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.01</sp:bin_width_wavelength>
+              <sp:detector_number>1</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_02</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">9.78</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.01</sp:bin_width_wavelength>
+              <sp:detector_number>2</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_03</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">7.93</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.09</sp:bin_width_wavelength>
+              <sp:detector_number>3</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_04</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">8.56</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.16</sp:bin_width_wavelength>
+              <sp:detector_number>4</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_05</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">9.35</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.20</sp:bin_width_wavelength>
+              <sp:detector_number>5</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_06</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">10.21</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.10</sp:bin_width_wavelength>
+              <sp:detector_number>6</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_07</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">11.04</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.19</sp:bin_width_wavelength>
+              <sp:detector_number>7</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_08</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">11.79</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">1.07</sp:bin_width_wavelength>
+              <sp:detector_number>8</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_09</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">12.57</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">0.81</sp:bin_width_wavelength>
+              <sp:detector_number>9</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      <sp:Spectral_Characteristics>
+        <Local_Internal_Reference>
+          <local_identifier_reference>Detector_10</local_identifier_reference>
+          <local_reference_type>spectral_characteristics_to_array_object</local_reference_type>
+        </Local_Internal_Reference>
+        <sp:spectrum_format>3D</sp:spectrum_format>
+        <sp:spectral_bin_type>wavelength</sp:spectral_bin_type>
+        <sp:Field_of_View> 
+          <sp:description>The IR focal plane is an uncooled microbolometer with 320 cross-track pixels and 240 down-track pixels with an instantaneous field of view (IFOV) of 0.25 milli-radians (100m from 400km altitude).
+            The focal plane is temperature stabilized to ~0.001 K using a temperature controller driving a thermo-electric heater/cooler.
+            Ten stripe filters are placed over the microbolometer array to produce ten ~1-m wide spectral bands at nine separate wavelengths centered from 6.8 to 14.9 micrometers.
+            Two filters (Bands 1 and 2) cover the same spectral region centered at 6.8 micrometers.</sp:description>
+          <sp:Rectangular_FOV>
+            <sp:width_angle unit="mrad">0.25</sp:width_angle>
+            <sp:length_angle unit="mrad">0.25</sp:length_angle>
+          </sp:Rectangular_FOV>
+        </sp:Field_of_View>
+        <sp:Bin_Description>
+          <sp:bin_profile_description>Center_wavelength is the position of the mid-point (half maximum) of the normalized relative spectral response for each band. Band width is the calculated spectral full-width at same half maximum (FWHM) location.</sp:bin_profile_description>
+          <sp:Axis_Bin_Set_Wavelength>
+            <sp:axis_name>Band</sp:axis_name>
+            <sp:Bin_Wavelength>
+              <sp:bin_sequence_number>1</sp:bin_sequence_number>
+              <sp:center_wavelength unit="micrometer">14.88</sp:center_wavelength>
+              <sp:bin_width_wavelength unit="micrometer">0.87</sp:bin_width_wavelength>
+              <sp:detector_number>10</sp:detector_number>
+            </sp:Bin_Wavelength>
+          </sp:Axis_Bin_Set_Wavelength>
+        </sp:Bin_Description>
+      </sp:Spectral_Characteristics>
+      
+      
+      <proc:Processing_Information>
+        <Local_Internal_Reference>
+          <local_identifier_reference>THEMIS_IR_RDR</local_identifier_reference>
+          <local_reference_type>processing_information_to_data_object</local_reference_type>
+        </Local_Internal_Reference>
+        <proc:Process> <!-- SFDU2CUBE -->
+          <proc:name>SFDU2CUBE</proc:name> 
+          <proc:description>
+            Translation of data format from SFDU into raw image qube(THM-EDR). Removes SFDU headers and unpackages data; returns an individual spectral image QUBE (THM-EDR) containing raw DN, with missing data CORE_NULL filled and an attched PDS label.
+          </proc:description>
+          <proc:Software>
+            <proc:Software_Program>
+              <proc:name>SFDU2CUBE</proc:name> 
+              <proc:program_type_name>Davinci</proc:program_type_name>
+              <proc:program_version>1.70</proc:program_version>
+              <proc:program_start_date_time>2022-05-26T16:23:31Z</proc:program_start_date_time>
+            </proc:Software_Program>
+          </proc:Software>
+        </proc:Process>        
+        <proc:Process> <!-- CAL_IR_IMAGE -->
+          <proc:name>CAL_IR_IMAGE</proc:name> 
+          <proc:description>
+            Calibration of a raw, infrared image (IREDR). Uses DN, gain and offset values from raw image with the instrument response function and a calibration flag image (IREDR); returns a calibrated spectral radiance image (IRRDR) in (W cm-2 str-1 um-1).
+          </proc:description>
+          <proc:Software>
+            <proc:Software_Program>
+              <proc:name>CAL_IR_IMAGE</proc:name>
+              <proc:program_type_name>Davinci</proc:program_type_name>
+              <proc:program_user>murray</proc:program_user>
+              <proc:program_hostname>mc07</proc:program_hostname>
+              <proc:program_version>5.20</proc:program_version> 
+              <proc:program_start_date_time>2022-09-27T20:07:29Z</proc:program_start_date_time> 
+              <proc:Software_Program_Parameters> 
+                <proc:Parameter>
+                  <proc:name>IEDR_FILE</proc:name>
+                  <proc:value>I01111002EDR.QUB</proc:value>
+                </proc:Parameter>
+                <proc:Parameter> 
+                  <proc:name>IR_IMG_CAL_QUBE_VER</proc:name>
+                  <proc:value>5.20</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>IRF_FILE</proc:name>
+                  <proc:value>/themis/calib/irf_fit_all_v3.0_tv6_1_2_v3.0</proc:value> 
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>TEMP2RAD_FILE</proc:name>
+                  <proc:value>/themis/calib/temp_rad_v4</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>CALIB_FLAG_IMAGE</proc:name>
+                  <proc:value>S01111004EDR.QUB</proc:value> 
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>CALIB_FLAG_DN</proc:name>
+                  <proc:value>(112.423950, 112.252083, 113.688538, 114.492706, 114.216667, 114.391655, 113.307297, 112.670830, 112.305206, 111.567711)</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>CALIB_FLAG_FILTER</proc:name>
+                  <proc:value>1</proc:value> 
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>CALIB_FLAG_OPTION</proc:name>
+                  <proc:value>2</proc:value> 
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>CALIB_FLAG_TEMP</proc:name>
+                  <proc:value>-5.269999981</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>DESTRIPE_OPTION_X</proc:name>
+                  <proc:value>3</proc:value> 
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>DESTRIPE_OPTION_Y</proc:name>
+                  <proc:value>3</proc:value> 
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>DESTRIPE_FILTER_X</proc:name>
+                  <proc:value>9</proc:value> 
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>DESTRIPTE_FILTER_Y</proc:name>
+                  <proc:value>9</proc:value>
+                </proc:Parameter>
+                <proc:Parameter> 
+                  <proc:name>STRAYLIGHT_GEOMETRY</proc:name>
+                  <proc:value>Reconstructed</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>STRAYLIGHT_XDELTA</proc:name>
+                  <proc:value>(0, 0, 3, 3, 3, 3, 1, 1, 0, 0)</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>STRAYLIGHT_YOFFSET</proc:name>
+                  <proc:value>(0, 0, 349, 299, 249, 20.0, 152, 10.0, 0, 0)</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>STRAYLIGHT_DEFOCUS_FILTER</proc:name>
+                  <proc:value>(0, 0, 29, 25, 21, 15, 9, 5, 0, 0)</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>STRAYLIGHT_TDI_SMEAR_FILTER</proc:name>
+                  <proc:value>(1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000, 1.000, 0.000)</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>STRAYLIGHT_PERCENT</proc:name>
+                  <proc:value>(0.000, 0.000, 2.000, 4.500, 6.000, 5.500, 5.000, 5.000, 0.000, 0.000)</proc:value>
+                </proc:Parameter>
+              </proc:Software_Program_Parameters>
+            </proc:Software_Program>
+          </proc:Software>
+        </proc:Process>
+        <proc:Process> <!-- GEOMETRY_QUALITY -->
+          <proc:name>GEOMETRY_QUALITY</proc:name> 
+          <proc:description>
+            The quality of the projected location of a THEMIS image can be affected by multiple factors,which are summarized here along with the assessed GEOMETRY_QUALITY_RATING. See the GEOMETRY/GEOMETRY.PDF for a full discussion of the individual parameters.
+          </proc:description>
+          <proc:Software>
+            <proc:Software_Program>
+              <proc:name>GEOMETRY-QUALITY</proc:name> 
+              <proc:program_start_date_time>2022-11-29T13:43:41Z</proc:program_start_date_time>
+              <proc:Software_Program_Parameters> 
+                <proc:Parameter>
+                  <proc:name>GEOMETRY_SOURCE_DESC</proc:name>
+                  <proc:value>RECONSTRUCTED</proc:value>
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>SPACECRAFT_ORBITAL_NODE</proc:name>
+                  <proc:value>DESCENDING</proc:value>            
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>SPACECRAFT_ATTITUDE_DESC</proc:name>
+                  <proc:value>N/A</proc:value>            
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>SPACECRAFT_ATTITUDE_ERROR</proc:name>
+                  <proc:value>N/A</proc:value>            
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>SPACECRAFT_DESAT_EVENT</proc:name>
+                  <proc:value>N/A</proc:value>            
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>SPACECRAFT_TELEMETRY_GAP</proc:name>
+                  <proc:value>N/A</proc:value>            
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>SPACECRAFT_ATTITUDE_CHANGE</proc:name>
+                  <proc:value>(0.015, 0.030, 0.021)</proc:value>            
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>ATTITUDE_QUALITY_RATING</proc:name>
+                  <proc:value>CHECK-STABILITY</proc:value>            
+                </proc:Parameter>
+                <proc:Parameter>
+                  <proc:name>GEOMETRY_QUALITY_RATING</proc:name>
+                  <proc:value>N/A</proc:value> 
+                </proc:Parameter>
+              </proc:Software_Program_Parameters>
+            </proc:Software_Program>
+          </proc:Software>
+        </proc:Process>
+      </proc:Processing_Information>
+    </Discipline_Area>
+  </Observation_Area>
+  
+  <Reference_List>
+    <Internal_Reference> <!-- BWS Product -->
+      <lid_reference>urn:nasa:pds:ody.themis:browse:i01111002_bws</lid_reference>
+      <reference_type>data_to_browse</reference_type>
+    </Internal_Reference>
+     <Internal_Reference> <!-- IR-VIS PAIR -->
+      <lid_reference>urn:nasa:pds:ody.themis:data_sdp:v01111003edr</lid_reference>
+      <reference_type>data_to_associate</reference_type>
+      <comment>Concurrent THEMIS image observation</comment>
+    </Internal_Reference> 
+    <Internal_Reference> <!-- ody_orient_pointing.txt -->
+      <lid_reference>urn:nasa:pds:ody.themis:document:ody_orient_point.txt</lid_reference>
+      <reference_type>data_to_document</reference_type>
+      <comment>Description of Odyssey spacecraft pointing modes used throughout investigation</comment>
+    </Internal_Reference> 
+    <External_Reference> <!-- THEMIS published reference -->
+      <doi>10.1029/2000JE001370</doi>
+      <reference_text>Christensen, P. R.; Bandfield, J. L.; Hamilton, V. E.; Ruff, S. W.; Kieffer, H. H.; Titus, T. N.; Malin, M. C.; Morris, R. V.; Lane, M. D.; Clark, R. L.; Jakosky, B. M.; Mellon, M. T.; Pearl, J. C.; Conrath, B. J.; Smith, M. D.; Clancy, R. T.; Kuzmin, R. O.; Roush, T.; Mehall, G. L.; Gorelick, N.; Bender, K.; Murray, K.; Dason, S.; Greene, E.; Silverman, S.; Greenfield, M., 2001, "Mars Global Surveyor Thermal Emission Spectrometer experiment: Investigation description and surface science results", Journal of Geophysical Research, Volume 106, Issue E10, p. 23823-23872.
+      </reference_text>
+      <description>Instrument overview in a journal publication</description>
+    </External_Reference>
+    <Source_Product_Internal> <!-- EDR Product -->
+      <lidvid_reference>urn:nasa:pds:ody.themis:data_sdp:i01111002edr::1.5</lidvid_reference>
+      <reference_type>data_to_raw_source_product</reference_type>
+    </Source_Product_Internal> 
+  </Reference_List>
+  
+  <File_Area_Observational>
+    <File>
+      <file_name>I01111002RDR.QUB</file_name>
+      <local_identifier>THEMIS_IR_RDR</local_identifier>
+      <creation_date_time>2022-09-27T20:07:29</creation_date_time>
+      <file_size unit="byte">16499924</file_size> 
+      <records>25621</records>
+      <comment>Calibrated Spectral Radiance</comment> 
+    </File>
+    <Header>
+      <name>PDS3 Header and History</name>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">3864</object_length>
+      <parsing_standard_id>PDS3</parsing_standard_id>
+    </Header>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_01</local_identifier>
+      <offset unit="byte">13524</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>5.391630253e-09</scaling_factor>
+        <value_offset>0.0004497104383 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_02</local_identifier>
+      <offset unit="byte">1662164</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>5.489543486e-09</scaling_factor>
+        <value_offset>0.0004465046804 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_03</local_identifier>
+      <offset unit="byte">3310804</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>7.210912312e-09</scaling_factor>
+        <value_offset>0.0005389565486 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_04</local_identifier>
+      <offset unit="byte">4959444</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>6.572893785e-09</scaling_factor>
+        <value_offset>0.0005403284449 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_05</local_identifier>
+      <offset unit="byte">6608084</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>6.156106735e-09</scaling_factor>
+        <value_offset>0.0005516578094 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_06</local_identifier>
+      <offset unit="byte">8256724</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>6.080902892e-09</scaling_factor>
+        <value_offset>0.0005864540581 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_07</local_identifier>
+      <offset unit="byte">9905364</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>5.96263483e-09</scaling_factor>
+        <value_offset>0.0005957740359 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_08</local_identifier>
+      <offset unit="byte">11554004</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>5.79868864e-09</scaling_factor>
+        <value_offset>0.0005984824966 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_09</local_identifier>
+      <offset unit="byte">13202644</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>5.160600836e-09</scaling_factor>
+        <value_offset>0.0005846389104 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array> 
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    <Array_3D_Spectrum>
+      <local_identifier>Detector_10</local_identifier>
+      <offset unit="byte">14851284</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <Element_Array>
+        <data_type>SignedMSB2</data_type> 
+        <unit>WATT*CM**-2*SR**-1*UM**-1</unit>
+        <scaling_factor>1.36760292e-09</scaling_factor>
+        <value_offset>0.0001495681645 </value_offset>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>1</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>2576</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array> 
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>  
+      <Special_Constants>
+        <missing_constant>-32768</missing_constant>
+        <high_instrument_saturation>-32764</high_instrument_saturation> 
+        <high_representation_saturation>-32765</high_representation_saturation>
+        <valid_minimum>-32752</valid_minimum>
+        <low_instrument_saturation>-32766</low_instrument_saturation>
+        <low_representation_saturation>-32767</low_representation_saturation>
+      </Special_Constants>
+    </Array_3D_Spectrum>
+    
+  </File_Area_Observational>
+</Product_Observational>
