@@ -514,7 +514,7 @@
     <definition>The ODY_Parameters class is the container for
       mission-specific metadata elements.</definition>
     <abstract_flag>false</abstract_flag>
-    <element_flag>false</element_flag>
+    <element_flag>true</element_flag>
     <DD_Association>
       <identifier_reference>ody.product_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
