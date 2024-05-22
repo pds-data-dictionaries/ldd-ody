@@ -519,7 +519,8 @@
     <submitter_name>IMG</submitter_name>
     <definition>The ODY_Parameters class is the container for
       mission-specific metadata elements.</definition>
-    <element_flag>true</element_flag>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>product_type</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -559,7 +560,8 @@
     <submitter_name>IMG</submitter_name>
     <definition>The THEMIS_Image_Properties class contains
       attributes specific to THEMIS images.</definition>
-    <element_flag>true</element_flag>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>image_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -630,7 +632,8 @@
     <definition>The THEMIS_Instrument_Attributes class contains
       attributes specific to the THEMIS instrument.
     </definition>
-    <element_flag>true</element_flag>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>detector_id</identifier_reference>
       <reference_type>attribute_of</reference_type>
@@ -707,7 +710,8 @@
     <definition>The THEMIS_Observation_Context class contains
       attributes specific to THEMIS observations.
     </definition>
-    <element_flag>true</element_flag>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
     <DD_Association>
       <identifier_reference>pacecraft_orientation_pitch</identifier_reference>
       <reference_type>attribute_of</reference_type>
