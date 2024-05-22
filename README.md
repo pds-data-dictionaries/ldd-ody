@@ -1,6 +1,6 @@
 # Mars Odyssey Mission Namespace
 
-The Mars Odyssey Mission Namespace (ody) contains classes, attributes and rules specific to the MRO mission and its instruments.
+The Mars Odyssey  Mission Namespace (ody) contains classes, attributes and rules specific to the ODY mission and its instruments.
 
 Steward: Jennifer Ward, [PDS Geosciences Node](https://pds-geosciences.wustl.edu/)
 
@@ -12,7 +12,7 @@ See this namespace's online documentation at https://pds-data-dictionaries.githu
 
 # Latest Release
 
-* [MRO](https://pds.nasa.gov/datastandards/dictionaries/#ody)
+* [ODY](https://pds.nasa.gov/datastandards/dictionaries/#ody)
 * [GitHub](../../releases/latest)
 * [Change log](CHANGELOG.md)
 
