@@ -1,0 +1,35 @@
+
+>>  INFO LDDTOOL Version: 15.0.6
+>>  INFO IM Version Id: 1.18.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.24
+>>  INFO Date: Wed May 22 00:09:29 UTC 2024
+>>  INFO PARENT_DIR: /tmp/lddtool-15.0.6/Data/
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:ody
+>>> INFO Init:  - Config.Properties Namespace Id Using:ody
+>>> INFO Init:  - LDD Dictionary_Type is Mission
+
+ -- LDDTool Execution Summary --
+     0 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1I00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-ody/ldd-ody/src/PDS4_ODY_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_ODY_1I00_1000.xsd
+     - ./PDS4_ODY_1I00_1000.sch
+     - ./PDS4_ODY_1I00_1000.xml
+     - ./export/JSON/PDS4_PDS_1I00.JSON
+
+>>  INFO Exit(0)

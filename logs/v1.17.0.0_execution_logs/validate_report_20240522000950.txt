@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       3.4.1
-   Date                          2024-05-22T00:07:57Z
+   Date                          2024-05-22T00:09:52Z
 
 Parameters:
    Targets                       [file:/home/runner/work/ldd-ody/ldd-ody/test/test1_VALID.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-ody/ldd-ody/build/development/2579056235c085b00d9b3e9a20538a269a69f0c6/1.19.0.0/PDS4_EXAMPLE_1J00_1000.xsd, file:/tmp/PDS4_PDS_1J00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-ody/ldd-ody/build/development/2579056235c085b00d9b3e9a20538a269a69f0c6/1.19.0.0/PDS4_EXAMPLE_1J00_1000.sch, file:/tmp/PDS4_PDS_1J00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-ody/ldd-ody/build/development/3ee102ab7c44627345b2bb212f579ce3b1e2739a/1.17.0.0/PDS4_ODY_1H00_1000.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-ody/ldd-ody/build/development/3ee102ab7c44627345b2bb212f579ce3b1e2739a/1.17.0.0/PDS4_ODY_1H00_1000.sch, file:/tmp/PDS4_PDS_1H00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,19 +22,20 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-ody/ldd-ody/test/test1_VALID.xml
+  FAIL: file:/home/runner/work/ldd-ody/ldd-ody/test/test1_VALID.xml
       WARNING  [warning.label.schema]   Cannot check versioning because no Schema given.
+      ERROR  [error.label.schema]   line 45, 29: cvc-complex-type.2.4.c: The matching wildcard is strict, but no declaration can be found for element 'example:My_First_LDD'.
       WARNING  [warning.label.missing_schematron_spec]   No schematron specification found in the label.
         1 product validation(s) completed
 
 Summary:
 
-  0 error(s)
+  1 error(s)
   2 warning(s)
 
   Product Validation Summary:
-    1          product(s) passed
-    0          product(s) failed
+    0          product(s) passed
+    1          product(s) failed
     0          product(s) skipped
 
   Referential Integrity Check Summary:
@@ -43,9 +44,10 @@ Summary:
     0          check(s) skipped
 
   Message Types:
+    1            error.label.schema
     1            warning.label.schema
     1            warning.label.missing_schematron_spec
 
 End of Report
-Completed execution in 4027 ms
+Completed execution in 4013 ms
 
