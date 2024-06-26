@@ -23,7 +23,7 @@
 
   <!--Hierarchy of classes and attributes 
     ody:ODY_Parameters
-        ody.GRS_Parameters
+        ody.Observation_Information
             [Defined below]
 
 -->               
