@@ -1,15 +1,13 @@
-# <My_NS_Name (prefix)> <Discipline|Local> Namespace
-<!-- UPDATE NEEDED - short summary of what this namespace is. approx 100-256 characters. update steward information -->
+# Mars Odyssey Mission Namespace
 
-The <My_NS_Name (prefix)> <Discipline/Local> Namespace does x, y, z.
+The Mars Odyssey Mission Namespace (ody) contains classes, attributes and rules specific to the Odyssey mission and its instruments.
 
-Steward: [add-steward-name-here, add-node-id-here Node](mailto:steward@example.com)
+Steward: Daniel Politte, [PDS Geosciences Node](https://pds-geosciences.wustl.edu/)
 
 
 # Documentation
 
-<!-- UPDATE NEEDED - replace ldd-template with your namespace github repository name -->
-See this namespace's online documentation at https://pds-data-dictionaries.github.io/ldd-template for a User Guide and Detailed Documentation on this namespace.
+See this namespace's online documentation at https://pds-data-dictionaries.github.io/ldd-ody/ for a User Guide and Detailed Documentation on this namespace.
 
 
 # Latest Release
@@ -53,7 +51,7 @@ Each build is auto-generated using Github Actions, PDS4 LDDTool, and Validate To
 You can manually run [LDDTool](https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html) on the IngestLDD using the following command:
 
 ```
-lddtool -lpsnJ MY_IngestLDD.xml
+lddtool -lpsnJ PDS4_ODY_IngestLDD.xml
 ```
 
 # Generating Namespace Documentation
