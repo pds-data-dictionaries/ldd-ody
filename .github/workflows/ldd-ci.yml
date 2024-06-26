@@ -28,9 +28,9 @@ jobs:
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN || github.token }}
           ssh-key: ${{ secrets.SSH_KEY }}
 
       - id: set-matrix
@@ -57,19 +57,15 @@ jobs:
       matrix: ${{fromJson(needs.get_versions.outputs.matrix)}}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN || github.token }}
           ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: Set up Python 3
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-
-      - name: Update submodules for dependencies
-        run: |
-          git submodule update --init --force --remote
 
       - name: Generate LDDs
         id: generate
@@ -81,21 +77,21 @@ jobs:
           lddtool_development_release: ${{ matrix.lddtool_development_release }}
           test_path: ${{ env.REGRESSION_TEST_PATH }}
           logs_path: ${{ env.LOGS_PATH }}
-          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN ||  github.token }}
 
       - name: Check logs
         run: |
           ls -R ${{ env.LOGS_PATH }}
 
       - name: Upload LDDs to Github Action Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: v${{matrix.pds4_version}}_LDDs
           path: ${{ env.DEPLOY_PATH }}
         if: ${{ always() }}
 
       - name: Upload Logs to Github Action Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: v${{matrix.pds4_version}}_execution_logs
           path: ${{ env.LOGS_PATH }}
@@ -108,12 +104,12 @@ jobs:
     if: ${{ failure() && github.actor != 'pdsen-ci' }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN || github.token }}
           ssh-key: ${{ secrets.SSH_KEY }}
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           path: /tmp/artifacts
 
@@ -150,12 +146,12 @@ jobs:
     if: ${{ github.actor != 'pdsen-ci' }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN || github.token }}
           ssh-key: ${{ secrets.SSH_KEY }}
 
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           path: /tmp/artifacts
 
