@@ -1,30 +1,258 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model 
-    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.sch"
+    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
-  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1
-  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1I00.xsd">
+<Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
+  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.xsd">
   <name>ODY</name>
   <ldd_version_id>1.0.0.0</ldd_version_id>
   <dictionary_type>Mission</dictionary_type>
-  <full_name>Jennifer Ward</full_name>
+  <full_name>Politte, Daniel</full_name>
   <steward_id>geo</steward_id>
   <namespace_id>ody</namespace_id>
   <comment>
     The ODY dictionary contains classes that describe aspects of the 
     Mars Odyssey mission and related instruments.
     
-    ODY version 1.0.0.0
-    PDS Build 1.18.0.0 (1I00)
+    2024-06-26 DVP. Initial version: classes and attributes for GRS.
     
-    2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version
-    
+    2024-07-12 DVP. Merged in THEMIS-related changes from a branch. The description of the original:
+      "2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version"
   </comment>
-  <last_modification_date_time>2024-05-21</last_modification_date_time>
+  <last_modification_date_time>2024-06-26T15:30:00Z</last_modification_date_time>
 
+  <!--Hierarchy of classes and attributes (all optional):
+    ody:ODY_Parameters
+        ody.product_type
+        ody.orbit_number
+        ody.THEMIS_Observation_Context
+            [Defined below]
+        ody.THEMIS_Instrument_Attributes
+            [Defined below]
+        ody.THEMIS_Image_Properties
+            [Defined below]
+        ody.Observation_Information
+            [Defined below]
+
+-->               
+  <!-- Begin definitions of ODY Mission Dictionary attributes -->
+    
+  <!-- Begin definition of shared attributes -->
+  
+  <DD_Attribute> <name>product_type</name>
+    <version_id>2.0</version_id>
+    <local_identifier>ody.product_type</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>
+      The product_type attribute identifies the type of data product.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>EDR</value>
+        <value_meaning>Experiment Data Record</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>RDR</value>
+        <value_meaning>Reduced Data Record</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>CDR</value>
+        <value_meaning>Calibrated Data Record</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>DDR</value>
+        <value_meaning>Derived Data Record</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>AVERAGED_HEND_DATA</value>
+        <value_meaning>GRS Averaged HEND Data</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>AVERAGED_NEUTRON_DATA</value>
+        <value_meaning>GRS Averaged Neutron (NS) Data</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>CHAN_DATA</value>
+        <value_meaning>GRS Chan Data</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>COMMAND_LIST</value>
+        <value_meaning>GRS Command List</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>DERIVED_HEND_DATA</value>
+        <value_meaning>GRS Derived HEND Data</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>DERIVED_NEUTRON_DATA</value>
+        <value_meaning>GRS Derived Neutron (NS) Data</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>ENG_DATA</value>
+        <value_meaning>GRS Engineering Data</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>E_KERNEL</value>
+        <value_meaning>GRS E Kernel Data</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>GAMMA_SPECTRA</value>
+        <value_meaning>GRS Gamma Spectra</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>HEND_SPECTRA</value>
+        <value_meaning>GRS HEND Spectra</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>MESSAGE_LOG</value>
+        <value_meaning>GRS Message Log</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>NEUTRON_SPECTRA</value>
+        <value_meaning>GRS Neutron Spectra</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>PULSER_SPECTRA</value>
+        <value_meaning>GRS Pulser Spectra</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <!-- End definition of shared attributes -->
+
+  <!-- Begin definitions of attributes in the GRS-specific classes -->
+  <DD_Attribute> <name>mission_phase_name</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.mission_phase_name</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>
+      The mission_phase_name attribute provides the mission-defined name of 
+      a time period within the mission.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>true</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <DD_Permissible_Value>
+        <value>CRUISE</value>
+        <value_meaning>ODY Cruise mission phase</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>AEROBRAKING</value>
+        <value_meaning>ODY Aerobraking mission phase</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>MAPPING</value>
+        <value_meaning>ODY Mapping mission phase</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>EXTENDED MISSION</value>
+        <value_meaning>ODY Extended Mission phases</value_meaning>
+      </DD_Permissible_Value>
+    </DD_Value_Domain>
+  </DD_Attribute>   
+  
+  <DD_Attribute> <name>product_version_id</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.product_version_id</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>
+      The product_version_id element identifies the version of an individual data product.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute> <name>release_number</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.release_number</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>release_id is the identifier of a scheduled release of ODY data from PDS. The
+      first ODY data release has release_number "0001". The release_number for a given product is always the
+      first release in which it appears, and does not change if the product is revised
+      later.</definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <minimum_characters>1</minimum_characters>
+    </DD_Value_Domain>
+  </DD_Attribute>    
+  
+  <DD_Attribute> <name>spacecraft_clock_start</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.spacecraft_clock_start</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>The spacecraft_clock_start_count attribute provides the value 
+      of the spacecraft clock at the beginning of a time period of 
+      interest.
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>[0-9]{12}</pattern>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute> <name>spacecraft_clock_stop</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.spacecraft_clock_stop</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>The spacecraft_clock_stop_count attribute provides the value of the spacecraft 
+      clock at the end of a time period of interest.
+    </definition>    
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+      <pattern>[0-9]{12}</pattern>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute><name>start_solar_longitude</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.start_solar_longitude</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>
+      Solar longitude (Ls) at the beginning of the observation period
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  
+  <DD_Attribute><name>stop_solar_longitude</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.stop_solar_longitude</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>
+      Solar longitude (Ls) at the end of the observation period
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+  <!-- End definitions of attributes in the GRS-specific classes -->
+    
+
+  <!-- Begin definitions of attributes in the THEMIS-specific classes -->
   <DD_Attribute>
     <name>command_sequence_number</name>
     <version_id>1.0</version_id>
@@ -327,37 +555,6 @@
     </DD_Value_Domain>
   </DD_Attribute>
 
-  <!-- CDR', 'DDR', 'EDR', 'RDR' -->
-  <DD_Attribute>
-    <name>product_type</name>
-    <version_id>1.0</version_id>
-    <local_identifier>ody.product_type</local_identifier>
-    <nillable_flag>false</nillable_flag>
-    <submitter_name>IMG</submitter_name>
-    <definition>The product_type attribute identifies the type of data product.
-    </definition>
-    <DD_Value_Domain>
-      <enumeration_flag>true</enumeration_flag>
-      <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-      <DD_Permissible_Value>
-        <value>EDR</value>
-        <value_meaning>Experiment Data Record</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>RDR</value>
-        <value_meaning>Reduced Data Record</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>CDR</value>
-        <value_meaning>Calibrated Data Record</value_meaning>
-      </DD_Permissible_Value>
-      <DD_Permissible_Value>
-        <value>DDR</value>
-        <value_meaning>Derived Data Record</value_meaning>
-      </DD_Permissible_Value>
-    </DD_Value_Domain>
-  </DD_Attribute>
-
   <DD_Attribute>
     <name>rice_flag</name>
     <version_id>1.0</version_id>
@@ -505,48 +702,14 @@
       <unit_of_measure_type>Units_of_Time</unit_of_measure_type>
     </DD_Value_Domain>
   </DD_Attribute>
+  <!-- End definitions of attributes in the THEMIS-specific classes -->
+  
+<!-- END OF ATTRIBUTE DEFINITIONS -->
 
-  <DD_Class>
-    <name>ODY_Parameters</name>
-    <version_id>1.0</version_id>
-    <local_identifier>ody.ODY_Parameters</local_identifier>
-    <submitter_name>IMG</submitter_name>
-    <definition>The ODY_Parameters class is the container for
-      mission-specific metadata elements.</definition>
-    <abstract_flag>false</abstract_flag>
-    <element_flag>true</element_flag>
-    <DD_Association>
-      <identifier_reference>ody.product_type</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>ody.orbit_number</identifier_reference>
-      <reference_type>attribute_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>ody.THEMIS_Observation_Context</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>ody.THEMIS_Instrument_Attributes</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-    <DD_Association>
-      <identifier_reference>ody.THEMIS_Image_Properties</identifier_reference>
-      <reference_type>component_of</reference_type>
-      <minimum_occurrences>0</minimum_occurrences>
-      <maximum_occurrences>1</maximum_occurrences>
-    </DD_Association>
-  </DD_Class>
+<!-- BEGINNING OF CLASS DEFINITIONS -->
+<!-- Class definitions are in order from innermost to outermost -->
 
+  <!-- Beginning of THEMIS-specific Classes -->
   <DD_Class>
     <name>THEMIS_Image_Properties</name>
     <version_id>1.0</version_id>
@@ -727,6 +890,114 @@
     <DD_Association>
       <identifier_reference>ody.spacecraft_pointing_mode</identifier_reference>
       <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <!-- End of THEMIS-specific Classes -->
+  
+  <!-- Beginning of Observation_Information Class (GRS-specific) -->
+  <DD_Class> <name>Observation_Information</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.Observation_Information</local_identifier>
+    <submitter_name>GEO</submitter_name>
+    <definition>The Observation_Information class is the container for observation-informational metadata elements.</definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>false</element_flag>
+    <DD_Association>
+      <identifier_reference>ody.release_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.product_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.product_version_id</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.mission_phase_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.start_solar_longitude</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.stop_solar_longitude</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.spacecraft_clock_start</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.spacecraft_clock_stop</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+  </DD_Class>
+  <!-- End of Observation_Information Class (GRS-specific) -->
+  
+  <!-- Beginning of ODY_Parameters Class definition with attributes in the order as they appear in the label -->
+  <DD_Class>
+    <name>ODY_Parameters</name>
+    <version_id>2.0</version_id>
+    <local_identifier>ody.ODY_Parameters</local_identifier>
+    <submitter_name>IMG</submitter_name>
+    <definition>The ODY_Parameters class is the container for
+      mission-specific metadata elements.</definition>
+    <abstract_flag>false</abstract_flag>
+    <element_flag>true</element_flag>
+    <DD_Association>
+      <identifier_reference>ody.product_type</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.orbit_number</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.THEMIS_Observation_Context</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.THEMIS_Instrument_Attributes</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.THEMIS_Image_Properties</identifier_reference>
+      <reference_type>component_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.Observation_Information</identifier_reference>
+      <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
