@@ -1,18 +1,19 @@
 # Mars Odyssey Mission Namespace
 
-The Mars Odyssey  Mission Namespace (ody) contains classes, attributes and rules specific to the ODY mission and its instruments.
+The Mars Odyssey Mission Namespace (ody) contains classes, attributes and rules specific to the Odyssey mission and its instruments.
 
-Steward: Jennifer Ward, [PDS Geosciences Node](https://pds-geosciences.wustl.edu/)
+Steward: Daniel Politte, [PDS Geosciences Node](https://pds-geosciences.wustl.edu/)
 
 
 # Documentation
 
-See this namespace's online documentation at https://pds-data-dictionaries.github.io/ldd-ody for a User Guide and Detailed Documentation on this namespace (TBD).
+See this namespace's online documentation at https://pds-data-dictionaries.github.io/ldd-ody/ for a User Guide and Detailed Documentation on this namespace.
 
 
 # Latest Release
 
-* [ODY](https://pds.nasa.gov/datastandards/dictionaries/#ody)
+<!-- UPDATE NEEDED - Replace <PDS Namespace> with namespace name and modify the URL to have #namespace-id at the end, e.g. #disp, #geom, etc. -->
+* [&lt;PDS Namespace&gt;](https://pds.nasa.gov/datastandards/dictionaries/#disp)
 * [GitHub](../../releases/latest)
 * [Change log](CHANGELOG.md)
 
@@ -50,7 +51,7 @@ Each build is auto-generated using Github Actions, PDS4 LDDTool, and Validate To
 You can manually run [LDDTool](https://nasa-pds.github.io/pds4-information-model/model-lddtool/index.html) on the IngestLDD using the following command:
 
 ```
-lddtool -lpsnJ MY_IngestLDD.xml
+lddtool -lpsnJ PDS4_ODY_IngestLDD.xml
 ```
 
 # Generating Namespace Documentation
