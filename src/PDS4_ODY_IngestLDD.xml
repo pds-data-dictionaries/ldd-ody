@@ -20,6 +20,8 @@
     
     2024-07-12 DVP. Merged in THEMIS-related changes from a branch. The description of the original:
       "2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version"
+    
+    2024-07-26 DVP. Added descriptions to attributes and renamed a GRS-specific class.
   </comment>
   <last_modification_date_time>2024-06-26T15:30:00Z</last_modification_date_time>
 
@@ -33,7 +35,7 @@
             [Defined below]
         ody.THEMIS_Image_Properties
             [Defined below]
-        ody.Observation_Information
+        ody.GRS_Observation_Information
             [Defined below]
 
 -->               
@@ -70,11 +72,11 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>AVERAGED_HEND_DATA</value>
-        <value_meaning>GRS Averaged HEND Data</value_meaning>
+        <value_meaning>Averaged HEND Data products are composed of averaged normalized counting rates, orbital neutron fluxes and the associated timing, spatial and engineering information.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>AVERAGED_NEUTRON_DATA</value>
-        <value_meaning>GRS Averaged Neutron (NS) Data</value_meaning>
+        <value_meaning>The AND product contains average fluxes for epithermal, thermal, and fast neutrons.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>CHAN_DATA</value>
@@ -86,11 +88,11 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>DERIVED_HEND_DATA</value>
-        <value_meaning>GRS Derived HEND Data</value_meaning>
+        <value_meaning>Derived HEND data are composed of raw counts, a background component, background subtracted counts and the associated timing and spatial information.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>DERIVED_NEUTRON_DATA</value>
-        <value_meaning>GRS Derived Neutron (NS) Data</value_meaning>
+        <value_meaning>The DND product contains normalized neutron counting rates for all four of the Neutron Spectrometer prisms, from which thermal and epithermal neutron count rates are determined.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>ENG_DATA</value>
@@ -102,11 +104,11 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>GAMMA_SPECTRA</value>
-        <value_meaning>GRS Gamma Spectra</value_meaning>
+        <value_meaning>This the raw uncalibrated gamma ray spectra and associated data.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>HEND_SPECTRA</value>
-        <value_meaning>GRS HEND Spectra</value_meaning>
+        <value_meaning>The raw uncalibrated hend spectra and associated data</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>MESSAGE_LOG</value>
@@ -114,11 +116,11 @@
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>NEUTRON_SPECTRA</value>
-        <value_meaning>GRS Neutron Spectra</value_meaning>
+        <value_meaning>The raw uncalibrated neutron detector counts and associated data</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>PULSER_SPECTRA</value>
-        <value_meaning>GRS Pulser Spectra</value_meaning>
+        <value_meaning>Pulser spectrum and associated data.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -140,19 +142,23 @@
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
         <value>CRUISE</value>
-        <value_meaning>ODY Cruise mission phase</value_meaning>
+        <value_meaning>ODY Cruise mission phase: 2001-04-07 thru 2001-10-22</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>ORBIT INSERTION</value>
+        <value_meaning>ODY Orbit Insertion mission phase: 2001-10-23 thru 2001-10-27</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>AEROBRAKING</value>
-        <value_meaning>ODY Aerobraking mission phase</value_meaning>
+        <value_meaning>ODY Aerobraking mission phase: 2001-10-28 thru 2002-02-17</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>MAPPING</value>
-        <value_meaning>ODY Mapping mission phase</value_meaning>
+        <value_meaning>ODY Mapping mission phase: 2002-02-18 thru 2004-09-30</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>EXTENDED MISSION</value>
-        <value_meaning>ODY Extended Mission phases</value_meaning>
+        <value_meaning>ODY Extended Mission phases: 2004-10-01 to present</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>   
@@ -896,12 +902,12 @@
   </DD_Class>
   <!-- End of THEMIS-specific Classes -->
   
-  <!-- Beginning of Observation_Information Class (GRS-specific) -->
-  <DD_Class> <name>Observation_Information</name>
+  <!-- Beginning of GRS-suite-specific GRS_Observation_Information Class -->
+  <DD_Class> <name>GRS_Observation_Information</name>
     <version_id>1.0</version_id>
-    <local_identifier>ody.Observation_Information</local_identifier>
+    <local_identifier>ody.GRS_Observation_Information</local_identifier>
     <submitter_name>GEO</submitter_name>
-    <definition>The Observation_Information class is the container for observation-informational metadata elements.</definition>
+    <definition>The GRS_Observation_Information class is the container for GRS-related metadata elements.</definition>
     <abstract_flag>false</abstract_flag>
     <element_flag>false</element_flag>
     <DD_Association>
@@ -953,7 +959,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
-  <!-- End of Observation_Information Class (GRS-specific) -->
+  <!-- End of GRS_Observation_Information Class -->
   
   <!-- Beginning of ODY_Parameters Class definition with attributes in the order as they appear in the label -->
   <DD_Class>
@@ -996,7 +1002,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
     <DD_Association>
-      <identifier_reference>ody.Observation_Information</identifier_reference>
+      <identifier_reference>ody.GRS_Observation_Information</identifier_reference>
       <reference_type>component_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
