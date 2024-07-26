@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu Jul 25 15:50:50 UTC 2024
+   Time                   Fri Jul 26 15:26:30 UTC 2024
    Common Schema          [PDS4_PDS_1K00.xsd]
    Common Schematron      [PDS4_PDS_1K00.sch]
    IM Version Id:         1.20.0.0
@@ -51,6 +51,8 @@ Parsed Input - Header:
     
     2024-07-12 DVP. Merged in THEMIS-related changes from a branch. The description of the original:
       "2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version"
+    
+    2024-07-26 DVP. Added descriptions to attributes and renamed a GRS-specific class.
   
    Last Modification Time 2024-06-26T15:30:00Z
    PDS4 Merge Flag        false
@@ -391,8 +393,8 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-   name                   Observation_Information
-   description            The Observation_Information class is the container for observation-informational metadata elements.
+   name                   GRS_Observation_Information
+   description            The GRS_Observation_Information class is the container for GRS-related metadata elements.
    is abstract            false
    is choice              false
    subclass of            USER
@@ -472,7 +474,7 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        component_of
 
-      local identifier      ody.Observation_Information
+      local identifier      ody.GRS_Observation_Information
       minimum occurrences   0
       maximum occurrences   1
       reference type        component_of

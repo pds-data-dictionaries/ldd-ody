@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:ody  Version:1.0.0.0 - Thu Jul 25 15:50:51 UTC 2024 -->
+  <!-- PDS4 XML/Schema for Name Space Id:ody  Version:1.0.0.0 - Fri Jul 26 15:26:30 UTC 2024 -->
   <!-- Generated from the PDS4 Information Model Version 1.21.0.0 - System Build 14.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
@@ -27,35 +27,18 @@
     
     2024-07-12 DVP. Merged in THEMIS-related changes from a branch. The description of the original:
       "2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version"
+    
+    2024-07-26 DVP. Added descriptions to attributes and renamed a GRS-specific class.
   
     </xs:documentation>
   </xs:annotation>
  
   <xs:element name="ODY_Parameters" type="ody:ODY_Parameters"> </xs:element>
 
-  <xs:complexType name="ODY_Parameters">
+  <xs:complexType name="GRS_Observation_Information">
     <xs:annotation>
-      <xs:documentation>The ODY_Parameters class is the container for
-        mission-specific metadata elements.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="product_type" type="ody:product_type" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="orbit_number" type="ody:orbit_number" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="THEMIS_Observation_Context" type="ody:THEMIS_Observation_Context" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="THEMIS_Instrument_Attributes" type="ody:THEMIS_Instrument_Attributes" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="THEMIS_Image_Properties" type="ody:THEMIS_Image_Properties" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Observation_Information" type="ody:Observation_Information" minOccurs="0" maxOccurs="1"> </xs:element>
-    </xs:sequence>
-    <!-- Begin assert statements for schematron - Enumerated Values -->
-    <!-- <xs:assert test="ody:product_type = ('AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR')"/> -->
-    <!-- End assert statements for schematron - Enumerated Values -->
-  </xs:complexType>
-
-  <xs:complexType name="Observation_Information">
-    <xs:annotation>
-      <xs:documentation>The Observation_Information class is the
-        container for observation-informational metadata
-        elements.</xs:documentation>
+      <xs:documentation>The GRS_Observation_Information class is the
+        container for GRS-related metadata elements.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="release_number" type="ody:release_number" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -69,7 +52,25 @@
     </xs:sequence>
     <!-- Begin assert statements for schematron - Enumerated Values -->
     <!-- <xs:assert test="ody:product_type = ('AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR')"/> -->
-    <!-- <xs:assert test="ody:mission_phase_name = ('AEROBRAKING', 'CRUISE', 'EXTENDED MISSION', 'MAPPING')"/> -->
+    <!-- <xs:assert test="ody:mission_phase_name = ('AEROBRAKING', 'CRUISE', 'EXTENDED MISSION', 'MAPPING', 'ORBIT INSERTION')"/> -->
+    <!-- End assert statements for schematron - Enumerated Values -->
+  </xs:complexType>
+
+  <xs:complexType name="ODY_Parameters">
+    <xs:annotation>
+      <xs:documentation>The ODY_Parameters class is the container for
+        mission-specific metadata elements.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="product_type" type="ody:product_type" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="orbit_number" type="ody:orbit_number" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="THEMIS_Observation_Context" type="ody:THEMIS_Observation_Context" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="THEMIS_Instrument_Attributes" type="ody:THEMIS_Instrument_Attributes" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="THEMIS_Image_Properties" type="ody:THEMIS_Image_Properties" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="GRS_Observation_Information" type="ody:GRS_Observation_Information" minOccurs="0" maxOccurs="1"> </xs:element>
+    </xs:sequence>
+    <!-- Begin assert statements for schematron - Enumerated Values -->
+    <!-- <xs:assert test="ody:product_type = ('AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR')"/> -->
     <!-- End assert statements for schematron - Enumerated Values -->
   </xs:complexType>
 

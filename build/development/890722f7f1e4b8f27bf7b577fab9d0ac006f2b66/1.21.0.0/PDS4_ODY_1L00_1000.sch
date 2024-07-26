@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:ody  Version:1.0.0.0 - Thu Jul 25 15:50:50 UTC 2024 -->
-  <!-- Generated from the PDS4 Information Model Version 1.20.0.0 - System Build 13.1 -->
+  <!-- PDS4 Schematron for Name Space Id:ody  Version:1.0.0.0 - Fri Jul 26 15:26:30 UTC 2024 -->
+  <!-- Generated from the PDS4 Information Model Version 1.21.0.0 - System Build 14.0 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -19,38 +19,38 @@
 		   <!--        merged together in the rules below.       -->
 		   <!-- ================================================ -->
   <sch:pattern>
+    <sch:rule context="ody:GRS_Observation_Information/ody:mission_phase_name">
+      <sch:assert test=". = ('AEROBRAKING', 'CRUISE', 'EXTENDED MISSION', 'MAPPING', 'ORBIT INSERTION')">
+        <title>ody:GRS_Observation_Information/ody:mission_phase_name/ody:mission_phase_name</title>
+        The attribute ody:GRS_Observation_Information/ody:mission_phase_name must be equal to one of the following values 'AEROBRAKING', 'CRUISE', 'EXTENDED MISSION', 'MAPPING', 'ORBIT INSERTION'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="ody:GRS_Observation_Information/ody:product_type">
+      <sch:assert test=". = ('AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR')">
+        <title>ody:GRS_Observation_Information/ody:product_type/ody:product_type</title>
+        The attribute ody:GRS_Observation_Information/ody:product_type must be equal to one of the following values 'AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="ody:GRS_Observation_Information/ody:start_solar_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>ody:GRS_Observation_Information/ody:start_solar_longitude/ody:start_solar_longitude</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="ody:GRS_Observation_Information/ody:stop_solar_longitude">
+      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
+        <title>ody:GRS_Observation_Information/ody:stop_solar_longitude/ody:stop_solar_longitude</title>
+        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="ody:ODY_Parameters/ody:product_type">
       <sch:assert test=". = ('AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR')">
         <title>ody:ODY_Parameters/ody:product_type/ody:product_type</title>
         The attribute ody:ODY_Parameters/ody:product_type must be equal to one of the following values 'AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="ody:Observation_Information/ody:mission_phase_name">
-      <sch:assert test=". = ('AEROBRAKING', 'CRUISE', 'EXTENDED MISSION', 'MAPPING')">
-        <title>ody:Observation_Information/ody:mission_phase_name/ody:mission_phase_name</title>
-        The attribute ody:Observation_Information/ody:mission_phase_name must be equal to one of the following values 'AEROBRAKING', 'CRUISE', 'EXTENDED MISSION', 'MAPPING'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="ody:Observation_Information/ody:product_type">
-      <sch:assert test=". = ('AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR')">
-        <title>ody:Observation_Information/ody:product_type/ody:product_type</title>
-        The attribute ody:Observation_Information/ody:product_type must be equal to one of the following values 'AVERAGED_HEND_DATA', 'AVERAGED_NEUTRON_DATA', 'CDR', 'CHAN_DATA', 'COMMAND_LIST', 'DDR', 'DERIVED_HEND_DATA', 'DERIVED_NEUTRON_DATA', 'EDR', 'ENG_DATA', 'E_KERNEL', 'GAMMA_SPECTRA', 'HEND_SPECTRA', 'MESSAGE_LOG', 'NEUTRON_SPECTRA', 'PULSER_SPECTRA', 'RDR'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="ody:Observation_Information/ody:start_solar_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>ody:Observation_Information/ody:start_solar_longitude/ody:start_solar_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="ody:Observation_Information/ody:stop_solar_longitude">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>ody:Observation_Information/ody:stop_solar_longitude/ody:stop_solar_longitude</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
