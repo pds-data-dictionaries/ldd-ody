@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model 
+<?xml-model
     href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.xsd">
+  
   <name>ODY</name>
   <ldd_version_id>1.0.0.0</ldd_version_id>
   <dictionary_type>Mission</dictionary_type>
@@ -36,9 +37,7 @@
         ody.THEMIS_Image_Properties
             [Defined below]
         ody.GRS_Observation_Information
-            [Defined below]
-
--->               
+  -->               
   <!-- Begin definitions of ODY Mission Dictionary attributes -->
     
   <!-- Begin definition of shared attributes -->
@@ -709,7 +708,7 @@
     </DD_Value_Domain>
   </DD_Attribute>
   <!-- End definitions of attributes in the THEMIS-specific classes -->
-  
+ 
 <!-- END OF ATTRIBUTE DEFINITIONS -->
 
 <!-- BEGINNING OF CLASS DEFINITIONS -->
@@ -959,6 +958,7 @@
       <maximum_occurrences>1</maximum_occurrences>
     </DD_Association>
   </DD_Class>
+
   <!-- End of GRS_Observation_Information Class -->
   
   <!-- Beginning of ODY_Parameters Class definition with attributes in the order as they appear in the label -->
@@ -1009,4 +1009,5 @@
     </DD_Association>
   </DD_Class>
 
+  <!-- End of ODY_Parameters Class definition --> 
 </Ingest_LDD>
