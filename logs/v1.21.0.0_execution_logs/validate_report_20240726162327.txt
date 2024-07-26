@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.5.2
-   Date        2024-07-26T15:46:08Z
+   Date        2024-07-26T16:23:28Z
 
 Parameters:
-   Targets                        [file:/home/runner/work/ldd-ody/ldd-ody/build/development/93d5af51c861e7b8d44da65f8e8f93e67de87b32/1.19.0.0/PDS4_ODY_1J00_1000.xml]
+   Targets                        [file:/home/runner/work/ldd-ody/ldd-ody/build/development/4291de0b41d24e6e77b6b59b3cf94812a9e5ee68/1.21.0.0/PDS4_ODY_1L00_1000.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-ody/ldd-ody/build/development/93d5af51c861e7b8d44da65f8e8f93e67de87b32/1.19.0.0/PDS4_ODY_1J00_1000.xsd, file:/tmp/PDS4_PDS_1J00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-ody/ldd-ody/build/development/93d5af51c861e7b8d44da65f8e8f93e67de87b32/1.19.0.0/PDS4_ODY_1J00_1000.sch, file:/tmp/PDS4_PDS_1J00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-ody/ldd-ody/build/development/4291de0b41d24e6e77b6b59b3cf94812a9e5ee68/1.21.0.0/PDS4_ODY_1L00_1000.xsd, file:/tmp/PDS4_PDS_1L00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-ody/ldd-ody/build/development/4291de0b41d24e6e77b6b59b3cf94812a9e5ee68/1.21.0.0/PDS4_ODY_1L00_1000.sch, file:/tmp/PDS4_PDS_1L00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -22,7 +22,7 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-ody/ldd-ody/build/development/93d5af51c861e7b8d44da65f8e8f93e67de87b32/1.19.0.0/PDS4_ODY_1J00_1000.xml
+  PASS: file:/home/runner/work/ldd-ody/ldd-ody/build/development/4291de0b41d24e6e77b6b59b3cf94812a9e5ee68/1.21.0.0/PDS4_ODY_1L00_1000.xml
         1 product validation(s) completed
 
 Summary:
@@ -45,5 +45,5 @@ Summary:
 
 
 End of Report
-Completed execution in 4707 ms
+Completed execution in 8051 ms
 
