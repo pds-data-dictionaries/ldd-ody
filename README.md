@@ -12,8 +12,7 @@ See this namespace's online documentation at https://pds-data-dictionaries.githu
 
 # Latest Release
 
-<!-- UPDATE NEEDED - Replace <PDS Namespace> with namespace name and modify the URL to have #namespace-id at the end, e.g. #disp, #geom, etc. -->
-* [&lt;PDS Namespace&gt;](https://pds.nasa.gov/datastandards/dictionaries/#disp)
+* [Mars Odyssey Mission Dictionary](https://pds.nasa.gov/datastandards/dictionaries/index-missions.shtml#ody)
 * [GitHub](../../releases/latest)
 * [Change log](CHANGELOG.md)
 
