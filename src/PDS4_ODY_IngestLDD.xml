@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model
-    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.sch"
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+    href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
   xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.xsd">
   
   <name>ODY</name>
-  <ldd_version_id>1.0.0.0</ldd_version_id>
+  <ldd_version_id>1.0.1.0</ldd_version_id>
   <dictionary_type>Mission</dictionary_type>
   <full_name>Politte, Daniel</full_name>
   <steward_id>geo</steward_id>
@@ -23,8 +22,10 @@
       "2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version"
     
     2024-07-26 DVP. Added descriptions to attributes and renamed a GRS-specific class.
+    
+    2024-07-29 TMH. Add in a missed update from PG (IMG) and a few definition fixes.
   </comment>
-  <last_modification_date_time>2024-06-26T15:30:00Z</last_modification_date_time>
+  <last_modification_date_time>2024-07-29T08:00:00Z</last_modification_date_time>
 
   <!--Hierarchy of classes and attributes (all optional):
     ody:ODY_Parameters
@@ -181,7 +182,7 @@
     <local_identifier>ody.release_number</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>GEO</submitter_name>
-    <definition>release_id is the identifier of a scheduled release of ODY data from PDS. The
+    <definition>release_number is the identifier of a scheduled release of ODY data from PDS. The
       first ODY data release has release_number "0001". The release_number for a given product is always the
       first release in which it appears, and does not change if the product is revised
       later.</definition>
@@ -305,7 +306,8 @@
     <local_identifier>ody.exposure_duration</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>IMG</submitter_name>
-    <definition>exposure duration time.
+    <definition>The length of time the THEMIS VIS detector array is 
+      exposed per frame in an image.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -530,9 +532,8 @@
     <local_identifier>ody.orbit_number</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>IMG</submitter_name>
-    <definition>The offset value of the THEMIS IR camera; the
-      offset value multiplied by a constant voltage is added to the
-      measured voltage in the analog to digital conversion.
+    <definition>The orbit_number attribute identifies the orbit
+      number when the observation was taken.
     </definition>
     <DD_Value_Domain>
       <enumeration_flag>false</enumeration_flag>
@@ -574,7 +575,7 @@
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
-        <value>Disable</value>
+        <value>Disabled</value>
         <value_meaning>onboard lossless compression was disabled</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
@@ -679,7 +680,7 @@
       <enumeration_flag>true</enumeration_flag>
       <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
       <DD_Permissible_Value>
-        <value>Disable</value>
+        <value>Disabled</value>
         <value_meaning>temporal average of successive lines was disabled</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
