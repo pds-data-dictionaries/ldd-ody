@@ -1,0 +1,484 @@
+PDS4 Local Data Dictionary Processing Report
+
+Configuration:
+   LDDTool Version        15.1.0
+   LDD Version Id:        1.0.1.0
+   LDD Label Version Id:  1.26
+   LDD Discipline (T/F):  false
+   LDD Namespace URL:     http://pds.nasa.gov/pds4/
+   LDD URN Prefix:        urn:nasa:pds:
+   Time                   Mon Jul 29 15:08:42 UTC 2024
+   Common Schema          [PDS4_PDS_1K00.xsd]
+   Common Schematron      [PDS4_PDS_1K00.sch]
+   IM Version Id:         1.20.0.0
+   IM Namespace Id:       pds
+   IM Label Version Id:   1.26
+   IM Object Model        [UpperModel.pont]
+   IM Data Dictionary     [dd11179.pins]
+   IM Glossary            [Glossary.pins]
+   IM Document Spec       [DMDocument.pins]
+
+Parameters:
+   Input File             [/home/runner/work/ldd-ody/ldd-ody/src/PDS4_ODY_IngestLDD.xml]
+   PDS Processing         true
+   LDD Processing         true
+   Discipline LDD         false
+   Mission LDD            true
+   Write Attr Elements    false
+   Merge with Master      false
+
+Summary:
+   Classes                5
+   Attributes             34
+   Associations           39
+   Error messages         0
+   Warning messages       0
+   Information messages   0
+
+Detailed validation messages
+
+Parsed Input - Header:
+   LDD Name               ODY
+   LDD Version            1.0.1.0
+   Full Name              Politte, Daniel
+   Steward                geo
+   Namespace Id           ody
+   Comment                
+    The ODY dictionary contains classes that describe aspects of the 
+    Mars Odyssey mission and related instruments.
+    
+    2024-06-26 DVP. Initial version: classes and attributes for GRS.
+    
+    2024-07-12 DVP. Merged in THEMIS-related changes from a branch. The description of the original:
+      "2024-05-21 PG (pgeissler@usgs.gov) added THEMIS parameters, initial version"
+    
+    2024-07-26 DVP. Added descriptions to attributes and renamed a GRS-specific class.
+    
+    2024-07-29 TMH. Add in a missed update from PG (IMG) and a few definition fixes.
+  
+   Last Modification Time 2024-07-29T08:00:00Z
+   PDS4 Merge Flag        false
+
+Parsed Input - Attributes:
+
+   name                   product_type
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description             The product_type attribute identifies the type of data product. 
+
+   name                   mission_phase_name
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description             The mission_phase_name attribute provides the mission-defined name of a time period within the mission. 
+
+   name                   product_version_id
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description             The product_version_id element identifies the version of an individual data product. 
+
+   name                   release_number
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            release_number is the identifier of a scheduled release of ODY data from PDS. The first ODY data release has release_number "0001". The release_number for a given product is always the first release in which it appears, and does not change if the product is revised later.
+   minimum characters     1
+
+   name                   spacecraft_clock_start
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft_clock_start_count attribute provides the value of the spacecraft clock at the beginning of a time period of interest. 
+
+   name                   spacecraft_clock_stop
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            The spacecraft_clock_stop_count attribute provides the value of the spacecraft clock at the end of a time period of interest. 
+
+   name                   start_solar_longitude
+   version                1.20
+   value data type        ASCII_Real
+   description             Solar longitude (Ls) at the beginning of the observation period 
+   unit of measure type   Units_of_Angle
+
+   name                   stop_solar_longitude
+   version                1.20
+   value data type        ASCII_Real
+   description             Solar longitude (Ls) at the end of the observation period 
+   unit of measure type   Units_of_Angle
+
+   name                   command_sequence_number
+   version                1.20
+   value data type        ASCII_Integer
+   description            Numeric identifier for the sequence of commands sent to the Odyssey spacecraft which include this THEMIS observation. 
+
+   name                   detector_id
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            Abbreviated name of THEMIS camera used to collect this observation. 
+
+   name                   exposure_duration
+   version                1.20
+   value data type        ASCII_Real
+   description            The length of time the THEMIS VIS detector array is exposed per frame in an image. 
+   unit of measure type   Units_of_Time
+
+   name                   flight_software_version_id
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            The version of THEMIS instrument flight software used to acquire the observation. 
+
+   name                   focal_plane_temperature
+   version                1.20
+   value data type        ASCII_Real
+   description            Temperature of the THEMIS VIS camera focal plane array at the time of the observation. 
+   unit of measure type   Units_of_Temperature
+
+   name                   gain_number
+   version                1.20
+   value data type        ASCII_Integer
+   description            The gain value of the THEMIS IR camera; a multiplicative factor used in the analog to digital conversion. 
+
+   name                   image_description
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            Description of the observation written by the THEMIS Mission Planner. 
+
+   name                   image_duration
+   version                1.20
+   value data type        ASCII_Real
+   description            The length of time required to collect all frames of all bands in the downlinked image. 
+   unit of measure type   Units_of_Time
+
+   name                   image_id
+   version                1.20
+   value data type        ASCII_Integer
+   description            Numeric identifier for this observation within the onboard command sequence. 
+
+   name                   inst_compression_name
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            The type of compression applied to the THEMIS VIS data onboard the spacecraft and removed before storage in the raw data file. 
+
+   name                   inst_compression_ratio
+   version                1.20
+   value data type        ASCII_Real
+   description            The ratio of the size of the uncompressed data file to the compressed data file. 
+
+   name                   interframe_delay
+   version                1.20
+   value data type        ASCII_Real
+   description            The time between successive frames of a THEMIS VIS observation. 
+   unit of measure type   Units_of_Time
+
+   name                   maximum_brightness_temperature
+   version                1.20
+   value data type        ASCII_Real
+   description            Maximum brightness temperature value measured within the image. 
+   unit of measure type   Units_of_Temperature
+
+   name                   minimum_brightness_temperature
+   version                1.20
+   value data type        ASCII_Real
+   description            Minimum brightness temperature value measured within the image. 
+   unit of measure type   Units_of_Temperature
+
+   name                   missing_scan_lines
+   version                1.20
+   value data type        ASCII_Integer
+   description            The total number of scan lines missing from a THEMIS IR image when it was received at Earth. 
+
+   name                   offset_number
+   version                1.20
+   value data type        ASCII_Integer
+   description            The offset value of the THEMIS IR camera; the offset value multiplied by a constant voltage is added to the measured voltage in the analog to digital conversion. 
+
+   name                   orbit_number
+   version                1.20
+   value data type        ASCII_NonNegative_Integer
+   description            The orbit_number attribute identifies the orbit number when the observation was taken. 
+
+   name                   partial_scan_lines
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            The number of lines in a summed THEMIS IR image which were produced by averaging less than N lines of the original non-summed image, where N is the value of the spatial_summing keyword. Value of N/A used for spatial_summing=1. 
+
+   name                   rice_flag
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            Status of onboard lossless compression algorithm applied before downlinking the THEMIS IR observation and removed before storage in the raw data file. 
+
+   name                   spacecraft_orientation_pitch
+   version                1.20
+   value data type        ASCII_Real
+   description            Odyssey spacecraft pitch orientation during this observation. 
+   unit of measure type   Units_of_Angle
+
+   name                   spacecraft_orientation_roll
+   version                1.20
+   value data type        ASCII_Real
+   description            Odyssey spacecraft roll orientation during this observation. 
+   unit of measure type   Units_of_Angle
+
+   name                   spacecraft_orientation_yaw
+   version                1.20
+   value data type        ASCII_Real
+   description            Odyssey spacecraft yaw orientation during this observation. 
+   unit of measure type   Units_of_Angle
+
+   name                   spacecraft_pointing_mode
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            Description of the Odyssey spacecraft pointing mode during this observation; see ODY_ORIENT_POINTING.txt for definitions of valid modes. 
+
+   name                   spatial_summing
+   version                1.20
+   value data type        ASCII_Integer
+   description            Onboard spatial average of NxN set of pixels, where N is the value of the keyword. A SPATIAL_SUMMING value equal to 1 indicates that no spatial averaging has been applied to the observation. 
+
+   name                   time_delay_integration_flag
+   version                1.20
+   value data type        ASCII_Short_String_Collapsed
+   description            Status of onboard algorithm which applies a temporal average of successive lines in an IR image. When enabled, THEMIS TDI averages 16 detector rows to equal one line in an IR image. 
+
+   name                   uncorrected_sclk_start_count
+   version                1.20
+   value data type        ASCII_Real
+   description            The spacecraft clock value when the THEMIS instrument was commanded to acquire an observation. This can differ from the SPACECRAFT_CLOCK_START_COUNT (or the other START_TIME keywords) by as much as 4 seconds, depending on which bands are acquired in the observation. 
+   unit of measure type   Units_of_Time
+
+Parsed Input - Classes:
+
+   name                   THEMIS_Image_Properties
+   description            The THEMIS_Image_Properties class contains attributes specific to THEMIS images.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      ody.image_id
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.image_duration
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.inst_compression_ratio
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.focal_plane_temperature
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.missing_scan_lines
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.partial_scan_lines
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.uncorrected_sclk_start_count
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.image_description
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.maximum_brightness_temperature
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.minimum_brightness_temperature
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   THEMIS_Instrument_Attributes
+   description            The THEMIS_Instrument_Attributes class contains attributes specific to the THEMIS instrument. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      ody.detector_id
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.flight_software_version_id
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.command_sequence_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.spatial_summing
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.interframe_delay
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.exposure_duration
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.inst_compression_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.gain_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.offset_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.rice_flag
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.time_delay_integration_flag
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   THEMIS_Observation_Context
+   description            The THEMIS_Observation_Context class contains attributes specific to THEMIS observations. 
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      ody.spacecraft_orientation_pitch
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.spacecraft_orientation_roll
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.spacecraft_orientation_yaw
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.spacecraft_pointing_mode
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   GRS_Observation_Information
+   description            The GRS_Observation_Information class is the container for GRS-related metadata elements.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      ody.release_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.product_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.product_version_id
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.mission_phase_name
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.start_solar_longitude
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.stop_solar_longitude
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.spacecraft_clock_start
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.spacecraft_clock_stop
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+   name                   ODY_Parameters
+   description            The ODY_Parameters class is the container for mission-specific metadata elements.
+   is abstract            false
+   is choice              false
+   subclass of            USER
+
+   Associations
+
+      local identifier      ody.product_type
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.orbit_number
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ody.THEMIS_Observation_Context
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      ody.THEMIS_Instrument_Attributes
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      ody.THEMIS_Image_Properties
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+      local identifier      ody.GRS_Observation_Information
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        component_of
+
+End of Report
