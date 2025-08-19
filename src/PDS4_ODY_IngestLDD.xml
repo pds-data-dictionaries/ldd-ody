@@ -7,7 +7,7 @@
   xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.xsd">
   
   <name>ODY</name>
-  <ldd_version_id>1.0.1.0</ldd_version_id>
+  <ldd_version_id>1.0.2.0</ldd_version_id>
   <dictionary_type>Mission</dictionary_type>
   <full_name>Politte, Daniel</full_name>
   <steward_id>geo</steward_id>
@@ -24,6 +24,8 @@
     2024-07-26 DVP. Added descriptions to attributes and renamed a GRS-specific class.
     
     2024-07-29 TMH. Add in a missed update from PG (IMG) and a few definition fixes.
+    
+    2025-08-19 DVP. Adds additional GRS product type values and center_latitude attribute.
   </comment>
   <last_modification_date_time>2024-07-29T08:00:00Z</last_modification_date_time>
 
@@ -87,6 +89,10 @@
         <value_meaning>GRS Command List</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
+        <value>CORRECTED_GAMMA_SPECTRA</value>
+        <value_meaning>Corrected gamma ray spectra with associated data.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
         <value>DERIVED_HEND_DATA</value>
         <value_meaning>Derived HEND data are composed of raw counts, a background component, background subtracted counts and the associated timing and spatial information.</value_meaning>
       </DD_Permissible_Value>
@@ -119,8 +125,16 @@
         <value_meaning>The raw uncalibrated neutron detector counts and associated data</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
+        <value>PROFILE_DATA</value>
+        <value_meaning>Profile spectra and associated data.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
         <value>PULSER_SPECTRA</value>
         <value_meaning>Pulser spectrum and associated data.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>SUMMED_GAMMA_SPECTRA</value>
+        <value_meaning>Sums of corrected gamma spectra with ancillary data.</value_meaning>
       </DD_Permissible_Value>
     </DD_Value_Domain>
   </DD_Attribute>
@@ -128,6 +142,22 @@
   <!-- End definition of shared attributes -->
 
   <!-- Begin definitions of attributes in the GRS-specific classes -->
+  <DD_Attribute><name>center_latitude</name>
+    <version_id>1.0</version_id>
+    <local_identifier>ody.center_latitude</local_identifier>
+    <nillable_flag>false</nillable_flag>
+    <submitter_name>GEO</submitter_name>
+    <definition>
+      Center latitude of the 5 degree latitude band of the summed gamma spectra dataset
+    </definition>
+    <DD_Value_Domain>
+      <enumeration_flag>false</enumeration_flag>
+      <value_data_type>ASCII_Real</value_data_type>
+      <unit_of_measure_type>Units_of_Angle</unit_of_measure_type>
+      <specified_unit_id>deg</specified_unit_id>
+    </DD_Value_Domain>
+  </DD_Attribute>
+
   <DD_Attribute> <name>mission_phase_name</name>
     <version_id>1.0</version_id>
     <local_identifier>ody.mission_phase_name</local_identifier>
@@ -930,6 +960,12 @@
     </DD_Association>
     <DD_Association>
       <identifier_reference>ody.mission_phase_name</identifier_reference>
+      <reference_type>attribute_of</reference_type>
+      <minimum_occurrences>0</minimum_occurrences>
+      <maximum_occurrences>1</maximum_occurrences>
+    </DD_Association>
+    <DD_Association>
+      <identifier_reference>ody.center_latitude</identifier_reference>
       <reference_type>attribute_of</reference_type>
       <minimum_occurrences>0</minimum_occurrences>
       <maximum_occurrences>1</maximum_occurrences>
