@@ -1,1 +1,1 @@
-Short abstract for the namespace should go here
+The 2001 Mars Odyssey mission dictionary (ody) contains classes and attributes specific to the 2001 Mars Odyssey mission and its instruments.

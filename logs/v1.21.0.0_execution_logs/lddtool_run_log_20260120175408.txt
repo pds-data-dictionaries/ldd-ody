@@ -1,9 +1,9 @@
 
 >>  INFO LDDTOOL Version: 16.0.0
->>  INFO IM Version Id: 1.19.0.0
+>>  INFO IM Version Id: 1.21.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.25
->>  INFO Date: Tue Jan 06 21:12:01 UTC 2026
+>>  INFO IM Label Version Id: 1.27
+>>  INFO Date: Tue Jan 20 17:54:09 UTC 2026
 >>  INFO PARENT_DIR: /tmp/lddtool-16.0.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:ody
@@ -18,7 +18,7 @@
 
 Input:
 
-     - IM Version: 1J00
+     - IM Version: 1L00
      - PDS4 Flag: true
      - LDD Flag: true
      - IM Version: true
@@ -28,9 +28,9 @@ Input:
 
 Output:
 
-     - ./PDS4_ODY_1J00_1030.xsd
-     - ./PDS4_ODY_1J00_1030.sch
-     - ./PDS4_ODY_1J00_1030.xml
-     - ./export/PDS4_PDS_1J00.JSON
+     - ./PDS4_ODY_1L00_1030.xsd
+     - ./PDS4_ODY_1L00_1030.sch
+     - ./PDS4_ODY_1L00_1030.xml
+     - ./export/PDS4_PDS_1L00.JSON
 
 >>  INFO Exit(0)
