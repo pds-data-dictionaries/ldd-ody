@@ -1,0 +1,36 @@
+
+>>  INFO LDDTOOL Version: 16.1.3
+>>  INFO IM Version Id: 1.22.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.0
+>>  INFO Date: Fri Sep 18 15:25:38 UTC 2026
+>>  INFO PARENT_DIR: /tmp/lddtool-16.1.3/Data/
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:ody
+>>> INFO Init:  - Config.Properties Namespace Id Using:ody
+>>> INFO Init:  - LDD Dictionary_Type is Mission
+>>> INFO Attribute: <release_number> - The default minimum characters provided by the attribute's data type is being overridden with 1
+
+ -- LDDTool Execution Summary --
+     0 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1M00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-ody/ldd-ody/src/PDS4_ODY_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_ODY_1M00_1040.xsd
+     - ./PDS4_ODY_1M00_1040.sch
+     - ./PDS4_ODY_1M00_1040.xml
+     - ./export/PDS4_PDS_1M00.JSON
+
+>>  INFO Exit(0)
