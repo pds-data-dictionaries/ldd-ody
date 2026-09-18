@@ -7,7 +7,7 @@
   xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1J00.xsd">
   
   <name>ODY</name>
-  <ldd_version_id>1.0.3.0</ldd_version_id>
+  <ldd_version_id>1.0.4.0</ldd_version_id>
   <dictionary_type>Mission</dictionary_type>
   <full_name>Politte, Daniel</full_name>
   <steward_id>geo</steward_id>
@@ -28,8 +28,10 @@
     2025-08-19 DVP. Adds additional GRS product type values and center_latitude attribute.
 
     2026-01-06 DVP. Adds additional GRS product type value for "special" products produced by the mission in 2002.
+
+    2026-09-18 DVP. Adds additional GRS product type value "ELEMENTS" for element-concentration data.
   </comment>
-  <last_modification_date_time>2024-07-29T08:00:00Z</last_modification_date_time>
+  <last_modification_date_time>2026-09-18T14:23:00Z</last_modification_date_time>
 
   <!--Hierarchy of classes and attributes (all optional):
     ody:ODY_Parameters
@@ -48,7 +50,7 @@
   <!-- Begin definition of shared attributes -->
   
   <DD_Attribute> <name>product_type</name>
-    <version_id>3.0</version_id>
+    <version_id>4.0</version_id>
     <local_identifier>ody.product_type</local_identifier>
     <nillable_flag>false</nillable_flag>
     <submitter_name>GEO</submitter_name>
@@ -101,6 +103,10 @@
       <DD_Permissible_Value>
         <value>DERIVED_NEUTRON_DATA</value>
         <value_meaning>The DND product contains normalized neutron counting rates for all four of the Neutron Spectrometer prisms, from which thermal and epithermal neutron count rates are determined.</value_meaning>
+      </DD_Permissible_Value>
+      <DD_Permissible_Value>
+        <value>ELEMENTS</value>
+        <value_meaning>The Odyssey GRS Element Concentrations data set contains element concentration maps and underlying data for various elements.</value_meaning>
       </DD_Permissible_Value>
       <DD_Permissible_Value>
         <value>ENG_DATA</value>

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4.0
+
+- 2026-09-18 DVP. Adds additional GRS product type value "ELEMENTS" for element-concentration data.
+
 ## 1.0.3.0
 -  2026-01-06 DVP. Adds additional GRS product type value for "special" products produced by the mission in 2002.
 
